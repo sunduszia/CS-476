@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
-        "projectName": "MyMentalHealth",
+        "projectName": "HealthWebsite",
         "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
         "packagesPath": "/Users/sanakadiwal/.nuget/packages/",
         "outputPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
