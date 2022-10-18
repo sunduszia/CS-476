@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {}
+    "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {}
   },
   "projects": {
-    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {
+    "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+        "projectUniqueName": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
         "projectName": "HealthWebsite",
-        "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
-        "packagesPath": "/Users/sanakadiwal/.nuget/packages/",
-        "outputPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
+        "projectPath": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+        "packagesPath": "/Users/sunduszia/.nuget/packages/",
+        "outputPath": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sanakadiwal/.nuget/NuGet/NuGet.Config"
+          "/Users/sunduszia/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
