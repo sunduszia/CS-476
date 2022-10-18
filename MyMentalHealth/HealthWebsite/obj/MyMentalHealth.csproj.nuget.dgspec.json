@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/HealthWebsite.csproj": {}
+    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {}
   },
   "projects": {
-    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/HealthWebsite.csproj": {
+    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/HealthWebsite.csproj",
-        "projectName": "HealthWebsite",
-        "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/HealthWebsite.csproj",
+        "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+        "projectName": "MyMentalHealth",
+        "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
         "packagesPath": "/Users/sanakadiwal/.nuget/packages/",
         "outputPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
         "projectStyle": "PackageReference",

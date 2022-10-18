@@ -1,4 +1,4 @@
-﻿namespace HealthWebsite.Models;
+﻿namespace MyMentalHealth.Models;
 
 public class ErrorViewModel
 {

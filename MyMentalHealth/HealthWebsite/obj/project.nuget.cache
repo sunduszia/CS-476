@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PTltco79M5R5z8fNV3+iK4L9kQb6fSI6BQ6q+QQ/6ZquBCZrookHrtTZ2Rh145/HYuqBbpJGHpPCj4SCSf47rQ==",
+  "dgSpecHash": "+I0iXZEmxYqvIsLmvHuLHh1VZoGPq+bL1sm2oH3Z7k+vQhYu1FnibYVzU5ftblnjv83MQDk4d82V42bOYE04Nw==",
   "success": true,
-  "projectFilePath": "/Users/sanakadiwal/Projects/HealthWebsite/HealthWebsite/HealthWebsite.csproj",
+  "projectFilePath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
   "expectedPackageFiles": [
     "/Users/sanakadiwal/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/sanakadiwal/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",

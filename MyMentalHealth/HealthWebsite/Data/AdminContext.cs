@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using HealthWebsite.Models;
+using MyMentalHealth.Models;
 
     public class AdminContext : DbContext
     {
@@ -12,5 +12,5 @@ using HealthWebsite.Models;
         {
         }
 
-        public DbSet<HealthWebsite.Models.AdminModel> AdminModel { get; set; } = default!;
+        public DbSet<MyMentalHealth.Models.AdminModel> AdminModel { get; set; } = default!;
     }

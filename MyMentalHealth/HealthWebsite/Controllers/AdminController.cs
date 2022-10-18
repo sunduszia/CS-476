@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using HealthWebsite.Models;
+using MyMentalHealth.Models;
 
-namespace HealthWebsite.Controllers
+namespace MyMentalHealth.Controllers
 {
     public class AdminController : Controller
     {
@@ -163,7 +163,7 @@ namespace HealthWebsite.Controllers
         {
             return View();
         }
-
+        /*
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AdminLogin(UserProfile objUser)
@@ -195,5 +195,6 @@ namespace HealthWebsite.Controllers
                 return RedirectToAction("Login");
             }
         }
+        */
     }
 }

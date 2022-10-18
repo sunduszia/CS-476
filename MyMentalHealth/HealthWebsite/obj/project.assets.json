@@ -10063,11 +10063,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sanakadiwal/Projects/HealthWebsite/HealthWebsite/HealthWebsite.csproj",
-      "projectName": "HealthWebsite",
-      "projectPath": "/Users/sanakadiwal/Projects/HealthWebsite/HealthWebsite/HealthWebsite.csproj",
+      "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+      "projectName": "MyMentalHealth",
+      "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
       "packagesPath": "/Users/sanakadiwal/.nuget/packages/",
-      "outputPath": "/Users/sanakadiwal/Projects/HealthWebsite/HealthWebsite/obj/",
+      "outputPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/sanakadiwal/.nuget/NuGet/NuGet.Config"

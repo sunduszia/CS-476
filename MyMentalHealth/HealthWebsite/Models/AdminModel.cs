@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
-namespace HealthWebsite.Models
+namespace MyMentalHealth.Models
 {
     
     public class AdminModel

@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using HealthWebsite.Models;
+using MyMentalHealth.Models;
 
-namespace HealthWebsite.Controllers;
+namespace MyMentalHealth.Controllers;
 
 public class HomeController : Controller
 {
