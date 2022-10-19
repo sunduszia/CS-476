@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {}
+    "/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {}
   },
   "projects": {
-    "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {
+    "/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+        "projectUniqueName": "/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
         "projectName": "HealthWebsite",
-        "projectPath": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
-        "packagesPath": "/Users/sunduszia/.nuget/packages/",
-        "outputPath": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/",
+        "projectPath": "/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+        "packagesPath": "/Users/uzbanasir/.nuget/packages/",
+        "outputPath": "/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sunduszia/.nuget/NuGet/NuGet.Config"
+          "/Users/uzbanasir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +38,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.7, )"
             },
@@ -51,11 +50,19 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.7, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.31, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -81,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }
