@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,9 +11,9 @@ namespace MyMentalHealth.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly AdminContext _context;
+        private readonly MymentalhealthContext _context;
 
-        public AdminController(AdminContext context)
+        public AdminController(MymentalhealthContext context)
         {
             _context = context;
         }
@@ -21,21 +21,21 @@ namespace MyMentalHealth.Controllers
         // GET: Admin
         public async Task<IActionResult> Index()
         {
-              return _context.AdminModel != null ? 
-                          View(await _context.AdminModel.ToListAsync()) :
-                          Problem("Entity set 'AdminContext.AdminModel'  is null.");
+            return _context.AdminModels != null ?
+                        View(await _context.AdminModels.ToListAsync()) :
+                        Problem("Entity set 'AdminContext.AdminModel'  is null.");
         }
 
         // GET: Admin/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.AdminModel == null)
+            if (id == null || _context.AdminModels == null)
             {
                 return NotFound();
             }
 
-            var adminModel = await _context.AdminModel
-                .FirstOrDefaultAsync(m => m.ID == id);
+            var adminModel = await _context.AdminModels
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (adminModel == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,UserName,Password")] AdminModel adminModel)
+        public async Task<IActionResult> Create([Bind("Id,UserName,Password")] AdminModel adminModel)
         {
             if (ModelState.IsValid)
             {
@@ -69,12 +69,12 @@ namespace MyMentalHealth.Controllers
         // GET: Admin/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.AdminModel == null)
+            if (id == null || _context.AdminModels == null)
             {
                 return NotFound();
             }
 
-            var adminModel = await _context.AdminModel.FindAsync(id);
+            var adminModel = await _context.AdminModels.FindAsync(id);
             if (adminModel == null)
             {
                 return NotFound();
@@ -87,9 +87,9 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,UserName,Password")] AdminModel adminModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Password")] AdminModel adminModel)
         {
-            if (id != adminModel.ID)
+            if (id != adminModel.Id)
             {
                 return NotFound();
             }
@@ -103,7 +103,7 @@ namespace MyMentalHealth.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AdminModelExists(adminModel.ID))
+                    if (!AdminModelExists(adminModel.Id))
                     {
                         return NotFound();
                     }
@@ -120,13 +120,13 @@ namespace MyMentalHealth.Controllers
         // GET: Admin/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.AdminModel == null)
+            if (id == null || _context.AdminModels == null)
             {
                 return NotFound();
             }
 
-            var adminModel = await _context.AdminModel
-                .FirstOrDefaultAsync(m => m.ID == id);
+            var adminModel = await _context.AdminModels
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (adminModel == null)
             {
                 return NotFound();
@@ -140,23 +140,23 @@ namespace MyMentalHealth.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.AdminModel == null)
+            if (_context.AdminModels == null)
             {
                 return Problem("Entity set 'AdminContext.AdminModel'  is null.");
             }
-            var adminModel = await _context.AdminModel.FindAsync(id);
+            var adminModel = await _context.AdminModels.FindAsync(id);
             if (adminModel != null)
             {
-                _context.AdminModel.Remove(adminModel);
+                _context.AdminModels.Remove(adminModel);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool AdminModelExists(int id)
         {
-          return (_context.AdminModel?.Any(e => e.ID == id)).GetValueOrDefault();
+            return (_context.AdminModels?.Any(e => e.Id == id)).GetValueOrDefault();
         }
 
         public ActionResult Login()
@@ -183,7 +183,6 @@ namespace MyMentalHealth.Controllers
             }
             return View(objUser);
         }
-
         public ActionResult AdminDashBoard()
         {
             if (Session["UserID"] != null)

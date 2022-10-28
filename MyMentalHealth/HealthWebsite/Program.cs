@@ -1,13 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using MyMentalHealth.Models;
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<UserContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("UserContext") ?? throw new InvalidOperationException("Connection string 'UserContext' not found.")));
-builder.Services.AddDbContext<AdminContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("AdminContext") ?? throw new InvalidOperationException("Connection string 'AdminContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<MymentalhealthContext>(
+    o => o.UseNpgsql(builder.Configuration.GetConnectionString("Default"))
+    );
 
 var app = builder.Build();
 
