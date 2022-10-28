@@ -12,9 +12,10 @@ namespace MyMentalHealth.Models
 
         [Required]
         public string UserName { get; set; }
+
         [Required]
         public string Password { get; set; }
-        public DateTime CreatedDateTime { get; set; } = DateTime.Now;
+   
     }
 }
 
