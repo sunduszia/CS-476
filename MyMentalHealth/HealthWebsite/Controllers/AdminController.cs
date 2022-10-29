@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,11 +13,57 @@ namespace MyMentalHealth.Controllers
 {
     public class AdminController : Controller
     {
+        private readonly UserManager<AdminModel> _userManager;
+        private readonly SignInManager<AdminModel> _signInManager;
         private readonly MymentalhealthContext _context;
 
-        public AdminController(MymentalhealthContext context)
+        public AdminController(MymentalhealthContext context, UserManager<AdminModel> userManager,SignInManager<AdminModel> signInManager)
         {
+            _userManager = userManager;
+            _signInManager = signInManager;
             _context = context;
+        }
+
+
+        [AllowAnonymous]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(AdminModel adminModel)
+        {
+            adminModel.LoginInValid = "true";
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(adminModel.UserName, adminModel.Password,adminModel.RememberMe, lockoutOnFailure: false);
+
+                if (result.Succeeded)
+                {
+                    adminModel.LoginInValid = "";
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt");
+                }
+            }
+            return View("Login", adminModel);
+
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout(string returnUrl = null)
+        {
+            await _signInManager.SignOutAsync();
+
+            if (returnUrl != null)
+            {
+                return LocalRedirect(returnUrl);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
         }
 
         // GET: Admin
