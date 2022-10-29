@@ -572,3 +572,39 @@
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.csproj.CopyComplete
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.genruntimeconfig.cache
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/ref/HealthWebsite.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/appsettings.Development.json
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/appsettings.json
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.staticwebassets.runtime.json
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.deps.json
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.runtimeconfig.json
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.pdb
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Humanizer.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.csproj.AssemblyReference.cache
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.GeneratedMSBuildEditorConfig.editorconfig
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.AssemblyInfoInputs.cache
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.AssemblyInfo.cs
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.csproj.CoreCompileInputs.cache
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/HealthWebsite.MvcApplicationPartsAssemblyInfo.cache
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.RazorAssemblyInfo.cache
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.RazorAssemblyInfo.cs
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/staticwebassets.build.json
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/staticwebassets.development.json
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/bundle/HealthWebsite.styles.css
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/projectbundle/HealthWebsite.bundle.scp.css
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.csproj.CopyComplete
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/HealthWebsite.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/refint/HealthWebsite.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/HealthWebsite.pdb
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.genruntimeconfig.cache
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/ref/HealthWebsite.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Npgsql.dll
+/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
