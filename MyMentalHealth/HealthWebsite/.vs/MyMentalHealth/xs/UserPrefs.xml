@@ -1,30 +1,27 @@
 ﻿<Properties StartupConfiguration="{0E14FF19-4660-4A1F-B3C7-AC6209373923}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/AdminModel.cs">
     <Files>
-      <File FileName="Program.cs" Line="29" Column="24" />
-      <File FileName="appsettings.json" Line="16" Column="2" />
+      <File FileName="Program.cs" Line="7" Column="31" />
+      <File FileName="appsettings.json" Line="13" Column="2" />
       <File FileName="appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="Models/AdminModel.cs" Line="12" Column="1" />
-      <File FileName="Models/UserModel.cs" Line="21" Column="1" />
+      <File FileName="Models/AdminModel.cs" Line="34" Column="1" />
+      <File FileName="Models/UserModel.cs" Line="4" Column="1" />
       <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
       <File FileName=".db" Line="1" Column="1" />
-      <File FileName="Models/MymentalhealthContext.cs" Line="18" Column="53" />
-      <File FileName="Views/Admin/Create.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Admin/Delete.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Admin/Details.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Admin/Edit.cshtml" Line="1" Column="1" />
-      <File FileName="Controllers/AdminController.cs" Line="26" Column="8" />
+      <File FileName="Views/Admin/Login.cshtml" Line="20" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyMentalHealth" expanded="True">
-            <Node name="MyMentalHealth" expanded="True" selected="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Views" expanded="True" />
+            <Node name="MyMentalHealth" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Admin" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -34,8 +31,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.MyMentalHealth PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MyMentalHealth PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
