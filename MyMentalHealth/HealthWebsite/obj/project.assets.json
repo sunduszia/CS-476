@@ -745,24 +745,25 @@
     ]
   },
   "packageFolders": {
-    "/Users/uzbanasir/.nuget/packages/": {}
+    "/Users/sanakadiwal/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+      "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
       "projectName": "HealthWebsite",
-      "projectPath": "/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
-      "packagesPath": "/Users/uzbanasir/.nuget/packages/",
-      "outputPath": "/Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
+      "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+      "packagesPath": "/Users/sanakadiwal/.nuget/packages/",
+      "outputPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/uzbanasir/.nuget/NuGet/NuGet.Config"
+        "/Users/sanakadiwal/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
