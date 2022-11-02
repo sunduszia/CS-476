@@ -16,6 +16,7 @@ public class MymentalhealthContext : DbContext
 
     public DbSet<AdminModel> AdminModels { get; set; }
     public DbSet<UserModel> UserModels { get; set; }
+    public DbSet<MentalhealthIssuesModel> MentalhealthIssuesModels { get; set; }
 
     
 }

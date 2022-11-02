@@ -43,6 +43,23 @@ namespace MyMentalHealth.Migrations
                     b.ToTable("AdminModels");
                 });
 
+            modelBuilder.Entity("MyMentalHealth.Models.MentalhealthIssuesModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MentalhealthIssuesModels");
+                });
+
             modelBuilder.Entity("MyMentalHealth.Models.UserModel", b =>
                 {
                     b.Property<int>("UserId")

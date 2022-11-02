@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MyMentalHealth.Migrations
 {
     [DbContext(typeof(MymentalhealthContext))]
-    [Migration("20221028050548_Initial")]
-    partial class Initial
+    [Migration("20221101224902_table")]
+    partial class table
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,6 +43,23 @@ namespace MyMentalHealth.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AdminModels");
+                });
+
+            modelBuilder.Entity("MyMentalHealth.Models.MentalhealthIssuesModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MentalhealthIssuesModels");
                 });
 
             modelBuilder.Entity("MyMentalHealth.Models.UserModel", b =>
