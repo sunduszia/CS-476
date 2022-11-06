@@ -39,12 +39,92 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Content/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGVudC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Content/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGVudC9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Content/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGVudC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Content/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGVudC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Content/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGVudC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/IssueItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXNzdWVJdGVtL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/IssueItem/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXNzdWVJdGVtL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/IssueItem/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXNzdWVJdGVtL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/IssueItem/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXNzdWVJdGVtL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/IssueItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXNzdWVJdGVtL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/MentalHealthIssue/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudGFsSGVhbHRoSXNzdWUvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/MentalHealthIssue/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudGFsSGVhbHRoSXNzdWUvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/MentalHealthIssue/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudGFsSGVhbHRoSXNzdWUvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/MentalHealthIssue/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudGFsSGVhbHRoSXNzdWUvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/MentalHealthIssue/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudGFsSGVhbHRoSXNzdWUvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/ResourceType/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VUeXBlL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/ResourceType/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VUeXBlL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/ResourceType/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VUeXBlL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/ResourceType/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VUeXBlL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/ResourceType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VUeXBlL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Shared/Error.cshtml]
