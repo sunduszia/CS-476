@@ -1,5 +1,11 @@
 ﻿<Properties StartupConfiguration="{0E14FF19-4660-4A1F-B3C7-AC6209373923}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/AdminModel.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MyMentalHealth PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/MymentalhealthContext.cs">
     <Files>
       <File FileName="Program.cs" Line="7" Column="31" />
       <File FileName="appsettings.json" Line="13" Column="2" />
@@ -9,15 +15,17 @@
       <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
       <File FileName=".db" Line="1" Column="1" />
       <File FileName="Views/Admin/Login.cshtml" Line="20" Column="1" />
+      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Models/MymentalhealthContext.cs" Line="1" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MyMentalHealth" expanded="True">
+          <Node name="MyMentalHealth" expanded="True" selected="True">
             <Node name="MyMentalHealth" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Admin" expanded="True" />
               </Node>
@@ -32,10 +40,4 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MyMentalHealth PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

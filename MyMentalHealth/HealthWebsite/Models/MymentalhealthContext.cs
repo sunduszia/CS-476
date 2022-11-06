@@ -14,8 +14,9 @@ public class MymentalhealthContext : DbContext
     public MymentalhealthContext(DbContextOptions<MymentalhealthContext> options)
         : base(options) { }
 
-    public DbSet<AdminModel> AdminModels { get; set; }
-    public DbSet<UserModel> UserModels { get; set; }
-
+    public DbSet<MentalHealthIssues> MentalHealthIssues { get; set; }
+    public DbSet<ResourceTypes> ResourceTypes { get; set; }
+    public DbSet<IssueItems> IssueItems { get; set; }
+    public DbSet<Contents> Contents { get; set; }
     
 }
