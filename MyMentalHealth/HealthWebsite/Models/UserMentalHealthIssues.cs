@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace HealthApp.Models
+namespace MyMentalHealth.Models
 {
     public class UserMentalHealthIssue
     {

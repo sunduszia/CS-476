@@ -357,3 +357,4 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Npgsql.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/HealthWebsite.MvcApplicationPartsAssemblyInfo.cs
