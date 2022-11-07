@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" asp-route-mentalHealthIssueId="@ViewBag.MentalHealthIssueId">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -22,20 +22,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                    @if (item.ContentId == 0)
+                    {
+                        <a asp-controller="Content" asp-action="Create" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Content</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Content" asp-action="Edit" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Content</a>
+                    }
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

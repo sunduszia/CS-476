@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using MyMentalHealth.Extentions;
 using MyMentalHealth.Models;
 
 namespace MyMentalHealth.Controllers
@@ -40,7 +41,7 @@ namespace MyMentalHealth.Controllers
 
 
             ViewBag.MentalHealthIssueId = mentalHealthIssueId;
-            return View(await _context.IssueItems.ToListAsync());
+            return View(listOfIssueItems);
         }
 
         // GET: IssueItem/Details/5
@@ -62,9 +63,15 @@ namespace MyMentalHealth.Controllers
         }
 
         // GET: IssueItem/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int mentalHealthIssueId)
         {
-            return View();
+            List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+            IssueItems issueItems = new IssueItems
+            {
+                MentalHealthIssueId = mentalHealthIssueId,
+                ResourceTypes = resourceTypes.ConvertToSelectList(0)
+            };
+            return View(issueItems);
         }
 
         // POST: IssueItem/Create
@@ -78,8 +85,10 @@ namespace MyMentalHealth.Controllers
             {
                 _context.Add(issueItems);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
             }
+            List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+            issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
             return View(issueItems);
         }
 
@@ -91,11 +100,15 @@ namespace MyMentalHealth.Controllers
                 return NotFound();
             }
 
+            List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+
             var issueItems = await _context.IssueItems.FindAsync(id);
             if (issueItems == null)
             {
                 return NotFound();
             }
+            issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
+
             return View(issueItems);
         }
 
@@ -129,11 +142,13 @@ namespace MyMentalHealth.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
             }
+            List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+            issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
+
             return View(issueItems);
         }
-
         // GET: IssueItem/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -159,21 +174,21 @@ namespace MyMentalHealth.Controllers
         {
             if (_context.IssueItems == null)
             {
-                return Problem("Entity set 'MymentalhealthContext.IssueItems'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.IssueItems'  is null.");
             }
             var issueItems = await _context.IssueItems.FindAsync(id);
             if (issueItems != null)
             {
                 _context.IssueItems.Remove(issueItems);
             }
-            
+
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
         }
 
         private bool IssueItemsExists(int id)
         {
-          return _context.IssueItems.Any(e => e.Id == id);
+            return (_context.IssueItems?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

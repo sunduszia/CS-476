@@ -7,10 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<MymentalhealthContext>(options =>
+    options.UseSqlServer(connectionString));
+/*
 builder.Services.AddDbContext<MymentalhealthContext>(
     o => o.UseNpgsql(builder.Configuration.GetConnectionString("Default"))
     );
-
+*/
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

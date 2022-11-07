@@ -1,10 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Models
 {
-    public class ResourceTypes
+    public class ResourceTypes:IProperties
     {
         [Key]
         public int Id { get; set; }

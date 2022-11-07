@@ -18,34 +18,18 @@ namespace MyMentalHealth.Controllers
             _context = context;
         }
 
-        // GET: Content
-        public async Task<IActionResult> Index()
-        {
-              return View(await _context.Contents.ToListAsync());
-        }
 
-        // GET: Content/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Contents == null)
-            {
-                return NotFound();
-            }
 
-            var contents = await _context.Contents
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (contents == null)
-            {
-                return NotFound();
-            }
-
-            return View(contents);
-        }
 
         // GET: Content/Create
-        public IActionResult Create()
+        public IActionResult Create(int issueItemId, int mentalHealthIssueId)
         {
-            return View();
+            Contents content = new Contents
+            {
+                ItemIssueId = issueItemId,
+                MentalHealthIssueId = mentalHealthIssueId
+            };
+            return View(content);
         }
 
         // POST: Content/Create
@@ -53,26 +37,30 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,HTMLContent,VideoLink")] Contents contents)
+        public async Task<IActionResult> Create([Bind("Id,Title,HTMLContent,VideoLink,ItemIssueId,MentalHealthIssueId")] Contents contents)
         {
             if (ModelState.IsValid)
             {
+                contents.IssueItems = await _context.IssueItems.FindAsync(contents.ItemIssueId);
                 _context.Add(contents);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                return RedirectToAction(nameof(Index), "IssueItem", new { mentalHealthIssueId = contents.MentalHealthIssueId });
             }
             return View(contents);
         }
 
         // GET: Content/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int issueItemId, int mentalHealthIssueId)
         {
-            if (id == null || _context.Contents == null)
+            if (issueItemId == 0 || _context.Contents == null)
             {
                 return NotFound();
             }
 
-            var contents = await _context.Contents.FindAsync(id);
+            var contents = await _context.Contents.SingleOrDefaultAsync(item => item.IssueItems.Id == issueItemId);
+            contents.MentalHealthIssueId = mentalHealthIssueId;
+
             if (contents == null)
             {
                 return NotFound();
@@ -85,7 +73,7 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,HTMLContent,VideoLink")] Contents contents)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,HTMLContent,VideoLink,MentalHealthIssueId")] Contents contents)
         {
             if (id != contents.Id)
             {
@@ -110,46 +98,9 @@ namespace MyMentalHealth.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), "IssueItem", new { mentalHealthIssueId = contents.MentalHealthIssueId });
             }
             return View(contents);
-        }
-
-        // GET: Content/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Contents == null)
-            {
-                return NotFound();
-            }
-
-            var contents = await _context.Contents
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (contents == null)
-            {
-                return NotFound();
-            }
-
-            return View(contents);
-        }
-
-        // POST: Content/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Contents == null)
-            {
-                return Problem("Entity set 'MymentalhealthContext.Contents'  is null.");
-            }
-            var contents = await _context.Contents.FindAsync(id);
-            if (contents != null)
-            {
-                _context.Contents.Remove(contents);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool ContentsExists(int id)

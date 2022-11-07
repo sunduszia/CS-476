@@ -11,6 +11,8 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
+            <input type="hidden" asp-for="MentalHealthIssueId" />
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
@@ -19,16 +21,17 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <textarea asp-for="Description" rows="4" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="MentalHealthIssueId" class="control-label"></label>
-                <select asp-for="MentalHealthIssueId" class ="form-control" asp-items="ViewBag.MentalHealthIssueId"></select>
-            </div>
+
             <div class="form-group">
                 <label asp-for="ResourceTypeId" class="control-label"></label>
-                <select asp-for="ResourceTypeId" class ="form-control" asp-items="ViewBag.ResourceTypeId"></select>
+                <select asp-for="ResourceTypeId" class="form-control" asp-items="@Model.ResourceTypes">
+                    <option value="">Select the Resource Type</option>
+                </select>
+                <span asp-validation-for="ResourceTypeId" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -38,7 +41,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" asp-route-mentalHealthIssueId="@Model.MentalHealthIssueId">Back to List</a>
 </div>
 
 @section Scripts {
