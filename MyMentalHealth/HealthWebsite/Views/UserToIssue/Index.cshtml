@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MyMentalHealth.Models.MentalHealthIssues>
+@using MyMentalHealth.Extentions
+@using MyMentalHealth.Models
+
+<h2 class="mt-4">Manage Users for each Health Issue</h2>
+<hr />
+
+<form id="UsersToIssue" asp-action="Index">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <h4>Mental Health Issue</h4>
+                <select id="MentalHealthIssueId" name="MentalHealthIssueId" class="form-control" asp-items="Model.ConvertToSelectList(1)">
+                    <option value="0">Please choose a MentalHealthIssue</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="alert">
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <h4>Users</h4>
+            <div class="form-group">
+                <div id="UsersList">
+                    <partial name="_UsersListPartial" model="new UsersMentalHealthIssueListModel { MentalHealthIssueId=0,Users=null,SelectedUsers=null}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="form-group text-right">
+                <button type="button" id="SaveUsers" name="SaveUsers" class="btn btn-outline-info">Save</button>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts{
+    <script src="~/js/UserToIssue.js"></script>
+    <script src="~/js/BootstrapAlerts.js"></script>
+
+}

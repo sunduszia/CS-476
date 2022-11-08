@@ -16,6 +16,7 @@ namespace MyMentalHealth.Models
 
         public string Description { get; set; }
 
+        
         public int MentalHealthIssueId { get; set; }
 
         [Required(ErrorMessage = "Please choose a valid item from the dropdown list")]

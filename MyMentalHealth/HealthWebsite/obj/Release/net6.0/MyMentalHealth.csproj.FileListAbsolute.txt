@@ -11,7 +11,6 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/MessagePack.Annotations.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.AspNetCore.Razor.Language.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
-/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.Build.Locator.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.CodeAnalysis.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.CodeAnalysis.CSharp.dll
@@ -285,3 +284,9 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/HealthWebsite.pdb
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/MyMentalHealth.genruntimeconfig.cache
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/ref/HealthWebsite.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.Build.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.Build.Framework.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Microsoft.NET.StringTools.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Npgsql.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Release/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

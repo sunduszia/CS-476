@@ -9,7 +9,8 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/MessagePack.Annotations.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.AspNetCore.Razor.Language.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Bcl.AsyncInterfaces.dll
-/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Build.Locator.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Build.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Build.Framework.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.CodeAnalysis.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.CodeAnalysis.CSharp.dll
@@ -34,6 +35,7 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Extensions.Caching.Memory.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Extensions.DependencyInjection.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Extensions.DependencyModel.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Identity.Client.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.IdentityModel.JsonWebTokens.dll
@@ -41,6 +43,7 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.IdentityModel.Protocols.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.IdentityModel.Tokens.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.NET.StringTools.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.OpenApi.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.VisualStudio.Debugger.Contracts.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.VisualStudio.Web.CodeGeneration.dll
@@ -52,6 +55,8 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Microsoft.Win32.SystemEvents.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Newtonsoft.Json.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Npgsql.dll
+/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/NuGet.Common.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/NuGet.Configuration.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Release/net6.0/PubTmp/Out/NuGet.DependencyResolver.Core.dll

@@ -1,33 +1,61 @@
 ﻿<Properties StartupConfiguration="{0E14FF19-4660-4A1F-B3C7-AC6209373923}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.MyMentalHealth PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/MymentalhealthContext.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Shared/_UsersListPartial.cshtml" relfile="Views/Shared/_UsersListPartial.cshtml" line="13" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
     <Files>
-      <File FileName="Program.cs" Line="7" Column="31" />
-      <File FileName="appsettings.json" Line="13" Column="2" />
-      <File FileName="appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="17" Column="1" />
+      <File FileName="appsettings.json" Line="12" Column="6" />
+      <File FileName="appsettings.Development.json" Line="1" Column="2" />
       <File FileName="Models/AdminModel.cs" Line="34" Column="1" />
-      <File FileName="Models/UserModel.cs" Line="4" Column="1" />
+      <File FileName="Models/UserModel.cs" Line="19" Column="1" />
       <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
       <File FileName=".db" Line="1" Column="1" />
-      <File FileName="Views/Admin/Login.cshtml" Line="20" Column="1" />
+      <File FileName="Views/Admin/Login.cshtml" Line="1" Column="40" />
       <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
-      <File FileName="Models/MymentalhealthContext.cs" Line="1" Column="14" />
+      <File FileName="Models/MymentalhealthContext.cs" Line="23" Column="50" />
+      <File FileName="Models/MentalHealthIssues.cs" Line="8" Column="49" />
+      <File FileName="Models/IssueItems.cs" Line="16" Column="1" />
+      <File FileName="Models/Users.cs" Line="18" Column="1" />
+      <File FileName="Controllers/MentalHealthIssueController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/IssueItemController.cs" Line="20" Column="10" />
+      <File FileName="Migrations/MymentalhealthContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="Controllers/UserController.cs" Line="57" Column="21" />
+      <File FileName="Views/User/Login.cshtml" Line="2" Column="1" />
+      <File FileName="Controllers/ContentController.cs" Line="1" Column="1" />
+      <File FileName="Migrations/20221029200232_Initial.cs" Line="1" Column="1" />
+      <File FileName="Migrations/20221029200232_Initial.Designer.cs" Line="1" Column="1" />
+      <File FileName="Models/UsersMentalHealthIssueListModel.cs" Line="11" Column="52" />
+      <File FileName="Views/Shared/_UsersListPartial.cshtml" Line="17" Column="49" />
+      <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/Error.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="Views/UsersToMentalHealthIssue/Index.cshtml" Line="35" Column="15" />
+      <File FileName="wwwroot/js/UserToMentalHealthIssue.js" Line="90" Column="7" />
+      <File FileName="wwwroot/js/BootstrapAlerts.js" Line="20" Column="1" />
+      <File FileName="Models/UserIssueListModel.cs" Line="11" Column="1" />
+      <File FileName="Controllers/UserToIssueController.cs" Line="45" Column="1" />
+      <File FileName="Views/Admin/Index.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MyMentalHealth" expanded="True" selected="True">
+          <Node name="MyMentalHealth" expanded="True">
             <Node name="MyMentalHealth" expanded="True">
+              <Node name="Comparer" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Admin" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True" />
               </Node>
               <Node name="appsettings.json" expanded="True" />
             </Node>
@@ -39,5 +67,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
 </Properties>

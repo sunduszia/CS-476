@@ -1,10 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Models
 {
-    public class MentalHealthIssues
+    public class MentalHealthIssues: IProperties
     {
         [Key]
         public int Id { get; set; }
@@ -15,6 +16,7 @@ namespace MyMentalHealth.Models
 
         public string Description { get; set; }
 
+        
         [ForeignKey("MentalHealthIssueId")]
         public virtual ICollection<IssueItems> IssueItems { get; set; }
 
