@@ -76,5 +76,11 @@ namespace MyMentalHealth.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult AdminViewChats()
+        {
+            return View();
+        }
     }
 }
