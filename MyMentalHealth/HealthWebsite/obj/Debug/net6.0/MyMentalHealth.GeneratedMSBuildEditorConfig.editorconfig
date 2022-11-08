@@ -119,6 +119,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/UserManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlck1hbmFnZS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
