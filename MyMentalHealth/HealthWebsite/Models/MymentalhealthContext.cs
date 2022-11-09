@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
 using Microsoft.EntityFrameworkCore.Design;
@@ -21,5 +21,6 @@ public class MymentalhealthContext : DbContext
     public DbSet<ResourceTypes> ResourceTypes { get; set; }
     public DbSet<IssueItems> IssueItems { get; set; }
     public DbSet<Contents> Contents { get; set; }
+    public DbSet<MyMentalHealth.Models.DailyCheckins> DailyCheckins { get; set; }
 
 }

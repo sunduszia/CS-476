@@ -73,24 +73,35 @@ namespace MyMentalHealth.Controllers
                 MentalHealthIssueId = mentalHealthIssueId,
                 ResourceTypes = resourceTypes.ConvertToSelectList(0)
             };
-            return View(issueItems);
+            IssueItemsMapping NewIssueItems = new IssueItemsMapping
+            {
+                MentalHealthIssueId = mentalHealthIssueId,
+                ResourceTypes = resourceTypes
+            };
+            return View(NewIssueItems);
         }
 
-        // POST: IssueItem/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,MentalHealthIssueId,ResourceTypeId")] IssueItems issueItems)
+        public async Task<IActionResult> Create([Bind("Title,Description,MentalHealthIssueId,ResourceTypeId")] IssueItemsMapping issueItems)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(issueItems);
+                IssueItems newIssueItems = new IssueItems
+                {
+                    Title = issueItems.Title,
+                    Description = issueItems.Description,
+                    MentalHealthIssueId = issueItems.MentalHealthIssueId,
+                    ResourceTypeId = issueItems.ResourceTypeId
+                };
+                _context.Add(newIssueItems);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
             }
             List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
-            issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
+            //issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
+            issueItems.ResourceTypes = resourceTypes;
             return View(issueItems);
         }
 

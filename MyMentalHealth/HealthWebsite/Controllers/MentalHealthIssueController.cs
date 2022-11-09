@@ -114,14 +114,20 @@ namespace MyMentalHealth.Controllers
             {
                 return NotFound();
             }
-            return View(mentalHealthIssues);
+            MentalHealthIssuesMapping newIssue = new MentalHealthIssuesMapping
+            {
+                Id = mentalHealthIssues.Id,
+                Title = mentalHealthIssues.Title,
+                Description = mentalHealthIssues.Description
+            };
+            return View(newIssue);
         }
         // POST: MentalHealthIssue/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description")] MentalHealthIssues mentalHealthIssues)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description")] MentalHealthIssuesMapping mentalHealthIssues)
         {
             if (id != mentalHealthIssues.Id)
             {
@@ -132,7 +138,14 @@ namespace MyMentalHealth.Controllers
             {
                 try
                 {
-                    _context.Update(mentalHealthIssues);
+                    MentalHealthIssues newIssue = new MentalHealthIssues
+                    {
+                        Id = mentalHealthIssues.Id,
+                        Title = mentalHealthIssues.Title,
+                        Description = mentalHealthIssues.Description
+
+                    };
+                    _context.Update(newIssue);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

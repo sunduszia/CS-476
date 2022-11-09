@@ -36,6 +36,9 @@ namespace MyMentalHealth.Models
         [ForeignKey("UserId")]
         public virtual ICollection<UserMentalHealthIssue> UserMentalHealthIssues { get; set; }
 
+        [ForeignKey("UserId")]
+        public virtual ICollection<DailyCheckins> DailyCheckins { get; set; }
+
     }
 }
 

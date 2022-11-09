@@ -1,4 +1,4 @@
-@model MyMentalHealth.Models.IssueItems
+@model MyMentalHealth.Models.IssueItemsMapping
 
 @{
     ViewData["Title"] = "Create";
@@ -27,8 +27,13 @@
 
             <div class="form-group">
                 <label asp-for="ResourceTypeId" class="control-label"></label>
-                <select asp-for="ResourceTypeId" class="form-control" asp-items="@Model.ResourceTypes">
+                <select asp-for="ResourceTypeId" class="form-control">
                     <option value="">Select the Resource Type</option>
+                    @foreach (var resourceTypes in Model.ResourceTypes)
+                    {
+                        <option value="@resourceTypes.Id">@resourceTypes.Title</option>
+                    }
+
                 </select>
                 <span asp-validation-for="ResourceTypeId" class="text-danger"></span>
 
@@ -47,3 +52,6 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+@**
+    asp-items="@Model.ResourceTypes
+*@
