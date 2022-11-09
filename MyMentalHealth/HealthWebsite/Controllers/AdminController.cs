@@ -31,7 +31,7 @@ namespace MyMentalHealth.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _context.Users.FirstOrDefaultAsync(m => m.Email == loginModel.Email && m.Password == loginModel.Password && m.RoleId == 1);
+                var user = await _context.Users.FirstOrDefaultAsync(m => m.Email == loginModel.Email && m.Password == loginModel.Password && m.RoleId == 1 && m.StudentId==0);
 
                 if (user != null)
                 {
@@ -51,21 +51,21 @@ namespace MyMentalHealth.Controllers
 
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                         principal, authProperties);
-
                     return RedirectToAction(nameof(Index));
                     
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt");
-                    return RedirectToAction(nameof(Login));
+                    ViewData["LoginError"] = "Invalid Email and/or Password. Please try again.";
+
+                    //ModelState.AddModelError(string.Empty, "Invalid login attempt");
+                    return View(loginModel);
                 }
 
             }
             return View(loginModel);
         }
         [HttpGet]
-        
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

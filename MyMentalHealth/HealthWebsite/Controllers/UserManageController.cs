@@ -19,44 +19,8 @@ namespace MyMentalHealth.Controllers
             _context = context;
         }
 
-        [AllowAnonymous]
-        public ActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginModel loginModel)
-        {
-            if (ModelState.IsValid)
-            {
-                var user = await _context.Users.FirstOrDefaultAsync(m => m.Email == loginModel.Email && m.Password == loginModel.Password && m.RoleId == 2);
-
-                /*.FirstOrDefaultAsync(m => m.Email == loginModel.Email && m.Password == loginModel.Password); */
-                if (user != null)
-                {
-                    
-                    return RedirectToAction(nameof(Index));
-                    /*
-                    Session["UserID"] = user.Id.ToString();
-                    Session["FirstName"] = user.FirstName.ToString();
-                    Session["LastName"] = user.LastName.ToString();
-                    if (user.RoleId == 2)
-                    {
-                        Session["Role"] == "User";
-                    }
-                    */
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt");
-                    return RedirectToAction(nameof(Login));
-                }
-
-            }
-            return View(loginModel);
-        }
+        
+        
         [Authorize(Roles = "Admin")]
         // GET: User
         public async Task<IActionResult> Index()
@@ -70,6 +34,7 @@ namespace MyMentalHealth.Controllers
                                            LastName = user.LastName,
                                            Email = user.Email,
                                            Password = user.Password,
+                                           StudentId = user.StudentId,
                                            RoleId = user.RoleId
                                        }).ToListAsync();
               return View(users);
@@ -104,7 +69,7 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Email,Password,RoleId")] Users users)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Email,Password,StudentId,RoleId")] Users users)
         {
             if (ModelState.IsValid)
             {
@@ -137,7 +102,7 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,Password,RoleId")] Users users)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,Password,StudentId,RoleId")] Users users)
         {
             if (id != users.Id)
             {

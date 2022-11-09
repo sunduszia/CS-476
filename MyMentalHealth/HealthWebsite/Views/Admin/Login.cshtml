@@ -5,10 +5,12 @@
 
 <h1>Admin Login</h1>
 <hr />
+
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
         <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" class="form-control" />
@@ -24,7 +26,14 @@
                     <input class="form-check-input" asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
                 </label>
             </div>
-
+            <div>
+                @if (ViewData["LoginError"] != null)
+                {
+                    <br />
+                    @ViewData["LoginError"]
+                    <br />
+                }
+            </div>
 
             <div class="form-group">
                 <input type="submit" value="Login" class="btn btn-primary" />
@@ -32,6 +41,12 @@
         </form>
     </div>
 </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>If you a student, please use the Student Login</p>
 
 
 @section Scripts {
