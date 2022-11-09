@@ -1,20 +1,10 @@
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/HealthWebsite.dll
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/refint/HealthWebsite.dll
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/HealthWebsite.pdb
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/appsettings.Development.json
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/appsettings.json
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.staticwebassets.runtime.json
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.deps.json
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.runtimeconfig.json
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.dll
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.pdb
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Humanizer.dll
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/MessagePack.dll
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/MessagePack.Annotations.dll
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.AspNetCore.Razor.Language.dll
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.Build.Locator.dll
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.CodeAnalysis.dll
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.CodeAnalysis.CSharp.dll
@@ -273,18 +263,13 @@
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.AssemblyInfoInputs.cache
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.AssemblyInfo.cs
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.csproj.CoreCompileInputs.cache
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/HealthWebsite.MvcApplicationPartsAssemblyInfo.cs
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/HealthWebsite.MvcApplicationPartsAssemblyInfo.cache
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.RazorAssemblyInfo.cache
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.RazorAssemblyInfo.cs
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/staticwebassets.build.json
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/staticwebassets.development.json
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/bundle/HealthWebsite.styles.css
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/projectbundle/HealthWebsite.bundle.scp.css
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.csproj.CopyComplete
 /Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.genruntimeconfig.cache
-/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/ref/HealthWebsite.dll
 /Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/appsettings.Development.json
 /Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/appsettings.json
 /Users/uzbanasir/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/HealthWebsite.staticwebassets.runtime.json
@@ -613,3 +598,23 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/refint/MyMentalHealth.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.pdb
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/ref/MyMentalHealth.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/refint/MyMentalHealth.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.pdb
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/MyMentalHealth.staticwebassets.runtime.json
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/MyMentalHealth
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/MyMentalHealth.deps.json
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/MyMentalHealth.runtimeconfig.json
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/MyMentalHealth.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/MyMentalHealth.pdb
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.Build.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.Build.Framework.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Microsoft.NET.StringTools.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Npgsql.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.MvcApplicationPartsAssemblyInfo.cs
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.MvcApplicationPartsAssemblyInfo.cache
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/bundle/MyMentalHealth.styles.css
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/projectbundle/MyMentalHealth.bundle.scp.css
+/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/ref/MyMentalHealth.dll

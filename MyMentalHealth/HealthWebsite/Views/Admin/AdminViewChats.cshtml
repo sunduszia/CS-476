@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MyMentalHealth.Models.AdminModel>
+
+@{
+    ViewData["Title"] = "View Chats";
+}
+
+<h1>View Chat Bot Chats</h1>
+<div>
+    <p>
+        This website uses Tidio for our chatbots, and there are two versions of the chatbot: online and offline.
+        The online version is where you are logged into the Tidio dashboard and you (one of our operators) will
+        be responding to any users using the chat bot. The offline version is where no operators are logged into
+        the dashboard so the user can select from some pre-determined options that provide answers to frequently asked
+        questions, and they can also provide their email to receive a response from an operator as soon as one is
+        available.
+    </p>
+
+    <p>
+        As an admin of this website, you are responsible for managing the chat bot conversations. Click the button below
+        to log into the Tidio dashboard and access the chat bot conversations. Note: you must have been added
+        as an operator by another admin that has the privileges to do so.
+    </p>
+
+    <a target="_blank" rel="noopener noreferrer" href="https://www.tidio.com/panel/login">Tidio Dashboard</a>
+
+</div>
