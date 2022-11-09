@@ -54,7 +54,7 @@ namespace MyMentalHealth.Controllers
         // POST: MentalHealthIssue/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Description")] MentalHealthIssues mentalHealthIssues)
         {
@@ -82,7 +82,40 @@ namespace MyMentalHealth.Controllers
             }
             return View(mentalHealthIssues);
         }
+        */
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Title,Description")] MentalHealthIssuesMapping mentalHealthIssues)
+        {
+            if (ModelState.IsValid)
+            {
+                MentalHealthIssues issues = new MentalHealthIssues
+                {
+                    Title = mentalHealthIssues.Title,
+                    Description = mentalHealthIssues.Description
+                };
+                _context.Add(issues);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(mentalHealthIssues);
+        }
 
+        // GET: MentalHealthIssue/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.MentalHealthIssues == null)
+            {
+                return NotFound();
+            }
+
+            var mentalHealthIssues = await _context.MentalHealthIssues.FindAsync(id);
+            if (mentalHealthIssues == null)
+            {
+                return NotFound();
+            }
+            return View(mentalHealthIssues);
+        }
         // POST: MentalHealthIssue/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.

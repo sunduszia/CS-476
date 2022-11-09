@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "anLcxehnsLymTuzBl3xX3Jlg8m6qN8AVQmRpfL20VQU=",
+  "Hash": "fjBePr4Baam9fcUd2nJHhXAPCVMMuHerAR8I+onJNtw=",
   "Source": "MyMentalHealth",
   "BasePath": "_content/MyMentalHealth",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/projectbundle/MyMentalHealth.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/wwwroot/css/main.css",
+      "SourceId": "MyMentalHealth",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/wwwroot/",
+      "BasePath": "_content/MyMentalHealth",
+      "RelativePath": "css/main.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/main.css"
     },
     {
       "Identity": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/wwwroot/css/site.css",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/BootstrapAlerts.js"
+    },
+    {
+      "Identity": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/wwwroot/js/main.js",
+      "SourceId": "MyMentalHealth",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/wwwroot/",
+      "BasePath": "_content/MyMentalHealth",
+      "RelativePath": "js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/main.js"
     },
     {
       "Identity": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/wwwroot/js/site.js",

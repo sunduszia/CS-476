@@ -53,11 +53,15 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title")] ResourceTypes resourceTypes)
+        public async Task<IActionResult> Create([Bind("Title")] ResourceTypesMapping resourceTypes)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(resourceTypes);
+                ResourceTypes newResourceTypes = new ResourceTypes
+                {
+                    Title = resourceTypes.Title
+                };
+                _context.Add(newResourceTypes);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -73,11 +77,17 @@ namespace MyMentalHealth.Controllers
             }
 
             var resourceTypes = await _context.ResourceTypes.FindAsync(id);
+            
             if (resourceTypes == null)
             {
                 return NotFound();
             }
-            return View(resourceTypes);
+            ResourceTypesMapping newResource = new ResourceTypesMapping
+            {
+                Id = resourceTypes.Id,
+                Title = resourceTypes.Title
+            };
+            return View(newResource);
         }
 
         // POST: ResourceType/Edit/5
@@ -85,7 +95,7 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title")] ResourceTypes resourceTypes)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title")] ResourceTypesMapping resourceTypes)
         {
             if (id != resourceTypes.Id)
             {
@@ -96,7 +106,12 @@ namespace MyMentalHealth.Controllers
             {
                 try
                 {
-                    _context.Update(resourceTypes);
+                    ResourceTypes newResource = new ResourceTypes
+                    {
+                        Id = resourceTypes.Id,
+                        Title = resourceTypes.Title
+                    };
+                    _context.Update(newResource);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

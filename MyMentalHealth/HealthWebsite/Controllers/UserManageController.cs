@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -69,12 +70,21 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Email,Password,StudentId,RoleId")] Users users)
+        public async Task<IActionResult> Create([Bind("FirstName,LastName,Email,Password,StudentId,RoleId")] UsersMapping users)
         {
             if (ModelState.IsValid)
             {
+                Users newUser = new Users
+                {
+                    FirstName = users.FirstName,
+                    LastName = users.LastName,
+                    Email = users.Email,
+                    Password = users.Password,
+                    StudentId = users.StudentId,
+                    RoleId = users.RoleId
+                };
 
-                _context.Add(users);
+                _context.Add(newUser);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -94,7 +104,17 @@ namespace MyMentalHealth.Controllers
             {
                 return NotFound();
             }
-            return View(users);
+            UsersMapping newUser = new UsersMapping
+            {
+                Id = users.Id,
+                FirstName = users.FirstName,
+                LastName = users.LastName,
+                Email = users.Email,
+                Password = users.Password,
+                StudentId = users.StudentId,
+                RoleId = users.RoleId
+            };
+            return View(newUser);
         }
         [Authorize(Roles = "Admin")]
         // POST: User/Edit/5
@@ -102,7 +122,7 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,Password,StudentId,RoleId")] Users users)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,Password,StudentId,RoleId")] UsersMapping users)
         {
             if (id != users.Id)
             {
@@ -113,7 +133,18 @@ namespace MyMentalHealth.Controllers
             {
                 try
                 {
-                    _context.Update(users);
+                    Users newUser = new Users
+                    {
+                        Id = users.Id,
+                        FirstName = users.FirstName,
+                        LastName = users.LastName,
+                        Email = users.Email,
+                        Password = users.Password,
+                        StudentId = users.StudentId,
+                        RoleId = users.RoleId,
+
+                    };
+                    _context.Update(newUser);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

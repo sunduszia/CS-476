@@ -1,13 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace MyMentalHealth.Models
 {
-    public class Users
+    public class UsersMapping
     {
-        [Key]
         public int Id { get; set; }
 
         [Required]
@@ -30,12 +28,8 @@ namespace MyMentalHealth.Models
         [Display(Name = "Student ID")]
         public int StudentId { get; set; }
 
-        [Display(Name = "Role")]
+
         public int RoleId { get; set; }
-
-        [ForeignKey("UserId")]
-        public virtual ICollection<UserMentalHealthIssue> UserMentalHealthIssues { get; set; }
-
     }
 }
 
