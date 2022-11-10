@@ -4,6 +4,32 @@
     ViewData["Title"] = "Index";
 }
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            events: @Html.Raw(ViewBag.Events)
+            });
+
+        calendar.render();
+
+        @*if (@Html.Raw(ViewBag.CheckinCompleted == "false")) {
+            document.getElementById('DailyCheckinLink').style.visibility = 'visible';
+            document.getElementById('DailyCheckinCompleteMessage').style.display = 'hidden';
+        }
+        else
+        {
+            document.getElementById('DailyCheckinLink').style.visibility = 'hidden';
+            document.getElementById('DailyCheckinCompleteMessage').style.visibility = 'visible';
+        }*@
+});</script>
+
 <h1>Index</h1>
 
 <p>
@@ -22,20 +48,29 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Feeling)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Feeling)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<div>
+    <h1>Daily Checkin Calendar</h1>
+    <a href="/DailyCheckins/Create" id='DailyCheckinLink'>Check In Here!</a>
+    @*<p id='DailyCheckinCompleteMessage'>You have already checked in today, please come back tomorrow!</p>*@
+    <div id='calendar'></div>
+</div>
+
