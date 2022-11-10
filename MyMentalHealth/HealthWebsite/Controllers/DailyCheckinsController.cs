@@ -45,11 +45,11 @@ namespace MyMentalHealth.Controllers
         // GET: DailyCheckins/Create
         public IActionResult Create()
         {
-            var user = _context.Users.FirstOrDefault(m => m.FirstName == User.Claims.FirstOrDefault(i => i.Type == "FirstName").Value
+            /*var user = _context.Users.FirstOrDefault(m => m.FirstName == User.Claims.FirstOrDefault(i => i.Type == "FirstName").Value
                                                   && m.LastName == User.Claims.FirstOrDefault(i => i.Type == "LastName").Value
                                                   && m.Email == User.Claims.FirstOrDefault(i => i.Type == "Email").Value
                                                   && m.Password == User.Claims.FirstOrDefault(i => i.Type == "Password").Value);
-            ViewData["Id"] = user.Id;
+            //ViewData["Id"] = user.Id;*/
             return View();
         }
 

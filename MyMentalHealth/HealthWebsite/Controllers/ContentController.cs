@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +12,6 @@ using MyMentalHealth.Models;
 
 namespace MyMentalHealth.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class ContentController : Controller
     {
         private readonly MymentalhealthContext _context;
@@ -105,10 +105,22 @@ namespace MyMentalHealth.Controllers
             }
             return View(contents);
         }
+        public async Task<IActionResult> Show(int itemIssueId)
+        {
+            Contents content = await (from item in _context.Contents
+                                     where item.IssueItems.Id == itemIssueId
+                                     select new Contents
+                                     {
+                                         Title = item.Title,
+                                         VideoLink = item.VideoLink,
+                                         HTMLContent = item.HTMLContent
+                                     }).FirstOrDefaultAsync();
 
+            return View(content);
+        }
         private bool ContentsExists(int id)
         {
-          return _context.Contents.Any(e => e.Id == id);
+            return _context.Contents.Any(e => e.Id == id);
         }
     }
 }

@@ -19,6 +19,7 @@ namespace MyMentalHealth.Controllers
         {
             _context = context;
         }
+
         public async Task<IActionResult> Index()
         {
             return View(await _context.MentalHealthIssues.ToListAsync());
@@ -42,6 +43,7 @@ namespace MyMentalHealth.Controllers
                         _context.AddRange(userSelectedToAdd);
                         await _context.SaveChangesAsync();
                     }
+                    await dbContextTransaction.CommitAsync();
                 }
                 catch(Exception ex)
                 {

@@ -21,6 +21,8 @@
     <None Remove="Extentions\" />
     <None Remove="Comparer\" />
     <None Remove="Views\User\" />
+    <None Remove="Mapping\" />
+    <None Remove="Data\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
@@ -38,5 +40,7 @@
     <Folder Include="Extentions\" />
     <Folder Include="Comparer\" />
     <Folder Include="Views\User\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>

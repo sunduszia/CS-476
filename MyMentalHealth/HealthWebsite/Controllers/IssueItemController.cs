@@ -81,7 +81,7 @@ namespace MyMentalHealth.Controllers
             return View(NewIssueItems);
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Title,Description,MentalHealthIssueId,ResourceTypeId")] IssueItemsMapping issueItems)
