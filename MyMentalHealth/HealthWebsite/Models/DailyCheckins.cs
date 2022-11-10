@@ -14,7 +14,7 @@ namespace MyMentalHealth.Models
         [StringLength(30, MinimumLength = 2)]
         public string Feeling { get; set; }
 
-        [Display(Name = "Date")]
+        [DisplayFormat(DataFormatString = "{0:D}")]
         public DateTime Date { get; set; }
 
         public int UserId { get; set; }

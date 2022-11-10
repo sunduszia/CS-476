@@ -19,21 +19,12 @@
 
         calendar.render();
 
-        @*if (@Html.Raw(ViewBag.CheckinCompleted == "false")) {
-            document.getElementById('DailyCheckinLink').style.visibility = 'visible';
-            document.getElementById('DailyCheckinCompleteMessage').style.display = 'hidden';
-        }
-        else
-        {
-            document.getElementById('DailyCheckinLink').style.visibility = 'hidden';
-            document.getElementById('DailyCheckinCompleteMessage').style.visibility = 'visible';
-        }*@
 });</script>
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Checkin Today</a>
 </p>
 <table class="table">
     <thead>
@@ -59,7 +50,6 @@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
@@ -69,8 +59,6 @@
 
 <div>
     <h1>Daily Checkin Calendar</h1>
-    <a href="/DailyCheckins/Create" id='DailyCheckinLink'>Check In Here!</a>
-    @*<p id='DailyCheckinCompleteMessage'>You have already checked in today, please come back tomorrow!</p>*@
     <div id='calendar'></div>
 </div>
 
