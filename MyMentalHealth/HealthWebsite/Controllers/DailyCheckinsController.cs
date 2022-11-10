@@ -2,13 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
+using Newtonsoft.Json;
 
 namespace MyMentalHealth.Controllers
 {
+    [Authorize]
     public class DailyCheckinsController : Controller
     {
         private readonly MymentalhealthContext _context;
@@ -21,7 +24,38 @@ namespace MyMentalHealth.Controllers
         // GET: DailyCheckins
         public async Task<IActionResult> Index()
         {
-              return View(await _context.DailyCheckins.ToListAsync());
+            int UserId = 1;
+
+            var events = _context.DailyCheckins.Where(x => x.UserId == UserId).Select(x => new
+            {
+                title = x.Feeling,
+                start = x.Date.ToString("yyyy-MM-dd")
+            }).ToList();
+
+            string eventsString = JsonConvert.SerializeObject(events);
+
+            ViewBag.Events = eventsString;
+
+            //var checkInCompleted = _context.DailyCheckins.Where(x => x.UserId == UserId)
+            //    .Where(x => x.Date == DateTime.Today)
+            //    .Select(x => new
+            //{
+            //    title = x.Feeling,
+            //    start = x.Date.ToString("yyyy-MM-dd")
+            //}).ToList();
+
+            //if (checkInCompleted.Count == 0)
+            //{
+            //    ViewBag.CheckinCompleted = "false";
+            //}
+            //else
+            //{
+            //    ViewBag.CheckinCompleted = "true";
+            //}
+
+
+
+            return View(await _context.DailyCheckins.ToListAsync());
         }
 
         // GET: DailyCheckins/Details/5
@@ -42,14 +76,16 @@ namespace MyMentalHealth.Controllers
             return View(dailyCheckins);
         }
 
+
         // GET: DailyCheckins/Create
         public IActionResult Create()
         {
-            var user = _context.Users.FirstOrDefault(m => m.FirstName == User.Claims.FirstOrDefault(i => i.Type == "FirstName").Value
-                                                  && m.LastName == User.Claims.FirstOrDefault(i => i.Type == "LastName").Value
-                                                  && m.Email == User.Claims.FirstOrDefault(i => i.Type == "Email").Value
-                                                  && m.Password == User.Claims.FirstOrDefault(i => i.Type == "Password").Value);
-            ViewData["Id"] = user.Id;
+            //var user = _context.Users.FirstOrDefault(m => m.FirstName == User.Claims.FirstOrDefault(i => i.Type == "FirstName").Value
+            //                                      && m.LastName == User.Claims.FirstOrDefault(i => i.Type == "LastName").Value
+            //                                      && m.Email == User.Claims.FirstOrDefault(i => i.Type == "Email").Value
+            //                                      && m.Password == User.Claims.FirstOrDefault(i => i.Type == "Password").Value);
+            //ViewData["Id"] = user.Id;
+            ViewData["Id"] = 1;
             return View();
         }
 
@@ -57,7 +93,6 @@ namespace MyMentalHealth.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Feeling,Date,UserId")] DailyCheckins dailyCheckins)
         {
             if (ModelState.IsValid)
