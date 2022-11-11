@@ -52,16 +52,12 @@ namespace MyMentalHealth.Controllers
 
             ViewData["UserId"] = UserId;
 
-            var checkInCompleted = _context.DailyCheckins.Where(x => x.UserId == UserId)
-                .Where(x => x.Date == DateTime.Today)
-                .Select(x => new
-                {
-                    title = x.Feeling,
-                    start = x.Date.ToString("yyyy-MM-dd")
-                }).ToList();
+            int checkInCompleted = _context.DailyCheckins
+                .Where(x => x.UserId == UserId)
+                .Where(x => x.Date >= DateTime.Now.Date.AddDays(-1))
+                .Count();
 
-
-            if (checkInCompleted.Count == 0)
+            if (checkInCompleted == 0)
             {
                 ViewBag.DailyCheckinComplete = "false";
             }
