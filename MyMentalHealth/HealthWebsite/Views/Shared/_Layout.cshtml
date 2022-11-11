@@ -32,7 +32,9 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            <script src="//code.tidio.co/ypqxmbx0gcgalwni7ix7l0eh3xngpmda.js" async></script>
+            @if (User.IsInRole("User")) {
+                <script src="//code.tidio.co/ypqxmbx0gcgalwni7ix7l0eh3xngpmda.js" async></script>
+             }
             @RenderBody()
         </main>
     </div>
