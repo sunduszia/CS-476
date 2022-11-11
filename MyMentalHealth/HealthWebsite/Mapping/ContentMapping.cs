@@ -19,10 +19,9 @@ namespace MyMentalHealth.Models
         [Display(Name = "Video Link")]
         public string VideoLink { get; set; }
 
-        public IssueItems IssueItems { get; set; }
 
         
-        public int ItemIssueId { get; set; }
+        public int IssueItemsId { get; set; }
 
         public int MentalHealthIssueId { get; set; }
     }

@@ -21,9 +21,9 @@ namespace MyMentalHealth.Models
 
         public IssueItems IssueItems { get; set; }
 
-        [NotMapped]
-        public int ItemIssueId { get; set; }
-
+        //[NotMapped]
+        //public int ItemIssueId { get; set; }
+        public int IssueItemsId { get; set; }
         [NotMapped]
         public int MentalHealthIssueId { get; set; }
     }

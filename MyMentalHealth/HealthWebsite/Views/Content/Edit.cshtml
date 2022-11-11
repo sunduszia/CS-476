@@ -1,4 +1,4 @@
-@model MyMentalHealth.Models.Contents
+@model MyMentalHealth.Models.ContentMapping
 
 @{
     ViewData["Title"] = "Edit";
@@ -13,7 +13,8 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <input type="hidden" asp-for="MentalHealthIssueId" />
+            <input type="hidden" asp-for="MentalHealthIssueId" value="@ViewBag.MentalHealthIssueId" />
+            <input type="hidden" asp-for="IssueItemsId" value="@ViewBag.IssueItemsId" />
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -21,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="HTMLContent" class="control-label"></label>
-                <input asp-for="HTMLContent" class="form-control" />
+                <textarea asp-for="HTMLContent" class="form-control"></textarea> 
                 <span asp-validation-for="HTMLContent" class="text-danger"></span>
             </div>
             <div class="form-group">

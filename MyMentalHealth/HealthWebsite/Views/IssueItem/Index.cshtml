@@ -37,11 +37,11 @@
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
                     @if (item.ContentId == 0)
                     {
-                        <a asp-controller="Content" asp-action="Create" asp-route-issueItemsId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Content</a>
+                        <a asp-controller="Content" asp-action="Create" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Content</a>
                     }
                     else
                     {
-                        <a asp-controller="Content" asp-action="Edit" asp-route-issueItemsId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Content</a>
+                        <a asp-controller="Content" asp-action="Edit" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Content</a>
                     }
 
                 </td>
@@ -49,3 +49,7 @@
         }
     </tbody>
 </table>
+
+@*
+    
+    asp-route-resourceTypes ="@ViewBag.ResourceTypes"*@

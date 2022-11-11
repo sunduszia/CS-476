@@ -20,9 +20,48 @@ namespace MyMentalHealth.Controllers
         {
             _context = context;
         }
+        // GET: Content/Create
+        public IActionResult Create(int issueItemId, int mentalHealthIssueId)
+        {
+            ContentMapping content = new ContentMapping
+            {
+                IssueItemsId = issueItemId,
+                MentalHealthIssueId = mentalHealthIssueId
+            };
+            ViewBag.MentalHealthIssueId = mentalHealthIssueId;
+            ViewBag.IssueItemsId = issueItemId;
+            return View(content);
+        }
 
+        // POST: Content/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Title,HTMLContent,VideoLink,IssueItemsId,MentalHealthIssueId")] ContentMapping contents)
+        {
+            if (ModelState.IsValid)
+            {
+                Contents newcontent = new Contents
+                {
+                    Title = contents.Title,
+                    HTMLContent = contents.HTMLContent,
+                    VideoLink = contents.VideoLink,
+                    IssueItemsId =  contents.IssueItemsId
+                };
+                //newcontent.IssueItems = await _context.IssueItems.FindAsync(contents.ItemIssueId);
 
+                _context.Add(newcontent);
+                await _context.SaveChangesAsync();
 
+                return RedirectToAction(nameof(Index), "IssueItem", new { mentalHealthIssueId = contents.MentalHealthIssueId });
+            }
+            ViewBag.MentalHealthIssueId = contents.MentalHealthIssueId;
+            ViewBag.IssueItemsId = contents.IssueItemsId;
+            return View(contents);
+        }
+
+        /*
 
         // GET: Content/Create
         public IActionResult Create(int issueItemId, int mentalHealthIssueId)
@@ -52,7 +91,7 @@ namespace MyMentalHealth.Controllers
             }
             return View(contents);
         }
-
+        */
         // GET: Content/Edit/5
         public async Task<IActionResult> Edit(int issueItemId, int mentalHealthIssueId)
         {
@@ -61,14 +100,26 @@ namespace MyMentalHealth.Controllers
                 return NotFound();
             }
 
-            var contents = await _context.Contents.SingleOrDefaultAsync(item => item.IssueItems.Id == issueItemId);
+            var contents = await _context.Contents.SingleOrDefaultAsync(item => item.IssueItemsId == issueItemId);
             contents.MentalHealthIssueId = mentalHealthIssueId;
 
             if (contents == null)
             {
                 return NotFound();
             }
-            return View(contents);
+            ContentMapping content = new ContentMapping
+            {
+                Id = contents.Id,
+                Title = contents.Title,
+                HTMLContent = contents.HTMLContent,
+                VideoLink = contents.VideoLink,
+                IssueItemsId = issueItemId,
+                MentalHealthIssueId = mentalHealthIssueId
+            };
+            
+            ViewBag.MentalHealthIssueId = mentalHealthIssueId;
+            ViewBag.IssueItemsId = issueItemId;
+            return View(content);
         }
 
         // POST: Content/Edit/5
@@ -76,7 +127,7 @@ namespace MyMentalHealth.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,HTMLContent,VideoLink,MentalHealthIssueId")] Contents contents)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,HTMLContent,VideoLink,IssueItemsId,MentalHealthIssueId")] ContentMapping contents)
         {
             if (id != contents.Id)
             {
@@ -87,7 +138,15 @@ namespace MyMentalHealth.Controllers
             {
                 try
                 {
-                    _context.Update(contents);
+                    Contents newContent = new Contents
+                    {
+                        Id = contents.Id,
+                        Title = contents.Title,
+                        HTMLContent = contents.HTMLContent,
+                        VideoLink = contents.VideoLink,
+                        IssueItemsId = contents.IssueItemsId
+                    };
+                    _context.Update(newContent);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -103,12 +162,14 @@ namespace MyMentalHealth.Controllers
                 }
                 return RedirectToAction(nameof(Index), "IssueItem", new { mentalHealthIssueId = contents.MentalHealthIssueId });
             }
+            ViewBag.MentalHealthIssueId = contents.MentalHealthIssueId;
+            ViewBag.IssueItemsId = contents.IssueItemsId;
             return View(contents);
         }
         public async Task<IActionResult> Show(int itemIssueId)
         {
             Contents content = await (from item in _context.Contents
-                                     where item.IssueItems.Id == itemIssueId
+                                     where item.IssueItemsId == itemIssueId
                                      select new Contents
                                      {
                                          Title = item.Title,

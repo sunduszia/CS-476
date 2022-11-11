@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MyMentalHealth.Data;
 using MyMentalHealth.Models;
 
 namespace MyMentalHealth.Controllers
@@ -17,15 +16,14 @@ namespace MyMentalHealth.Controllers
     {
         private readonly MymentalhealthContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly IDataFunctions _dataFunctions;
+        
 
 
 
-        public UserController(MymentalhealthContext context, IHttpContextAccessor httpContextAccessor, IDataFunctions dataFunctions)
+        public UserController(MymentalhealthContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;
-            _dataFunctions = dataFunctions;
         }
         public ActionResult Login()
         {
@@ -169,12 +167,6 @@ namespace MyMentalHealth.Controllers
         public async Task<IActionResult> ChooseIssues(int[] issuesSelected)
         {
             int userId = Int32.Parse(_httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(i => i.Type == "Id").Value);
-            /*foreach (var issue in issuesSelected)
-            {
-                var result = _context.
-            }
-
-            */
             
             List<UserMentalHealthIssue> userIssuesToDelete =  GetIssuesToDelete(userId);
             List<UserMentalHealthIssue> userIssuesToAdd = GetIssuesToAdd(issuesSelected, userId);
@@ -199,7 +191,6 @@ namespace MyMentalHealth.Controllers
 
                 }
             }
-            //await _dataFunctions.UpdateUserCategoryAsync(userIssuesToDelete,userIssuesToAdd);*/
             return RedirectToAction("IssueContent");
         }
 
@@ -228,19 +219,21 @@ namespace MyMentalHealth.Controllers
             return false;
 
         }
-
+        /*
+         join content in _context.Contents
+                                               on issueItem.Id equals content.IssueItemsId*/
         private async Task<List<MentalHealthIssues>> GetItemsWithContent()
         {
             var itemsWithContent = await (from issues in _context.MentalHealthIssues
                                                join issueItem in _context.IssueItems
                                                on issues.Id equals issueItem.MentalHealthIssueId
                                                join content in _context.Contents
-                                               on issueItem.Id equals content.IssueItems.Id
+                                               on issueItem.Id equals content.IssueItemsId
                                                select new MentalHealthIssues
                                                {
                                                    Id = issues.Id,
                                                    Title = issues.Title,
-                                                   Description = issueItem.Description,
+                                                   Description = issues.Description,
                                                    
                                                }).Distinct().ToListAsync();
             return itemsWithContent;
@@ -303,7 +296,7 @@ namespace MyMentalHealth.Controllers
                           join mentalHealthIssue in _context.MentalHealthIssues
                           on item.MentalHealthIssueId equals mentalHealthIssue.Id
                           join content in _context.Contents
-                          on item.Id equals content.IssueItems.Id
+                          on item.Id equals content.IssueItemsId
                           join user in _context.UserMentalHealthIssues
                           on mentalHealthIssue.Id equals user.MentalHealthIssueId
                           join resource in _context.ResourceTypes

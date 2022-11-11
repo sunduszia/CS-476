@@ -1,4 +1,4 @@
-@model MyMentalHealth.Models.Contents
+@model MyMentalHealth.Models.ContentMapping
 
 @{
     ViewData["Title"] = "Create";
@@ -9,10 +9,10 @@
 <h4>Contents</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-10">
         <form asp-action="Create">
-            <input type="hidden" asp-for="MentalHealthIssueId" />
-            <input type="hidden" asp-for="ItemIssueId" />
+            <input type="hidden" asp-for="MentalHealthIssueId" value="@ViewBag.MentalHealthIssueId"/>
+            <input type="hidden" asp-for="IssueItemsId" value="@ViewBag.IssueItemsId"/>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="HTMLContent" class="control-label"></label>
-                <input asp-for="HTMLContent" class="form-control" />
+                <textarea asp-for="HTMLContent" class="form-control"></textarea> 
                 <span asp-validation-for="HTMLContent" class="text-danger"></span>
             </div>
             <div class="form-group">

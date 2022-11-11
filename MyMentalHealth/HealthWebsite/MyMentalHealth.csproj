@@ -17,9 +17,6 @@
     <None Remove="MySql.Data" />
     <None Remove="MySql.EntityFrameworkCore" />
     <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
-    <None Remove="Interface\" />
-    <None Remove="Extentions\" />
-    <None Remove="Comparer\" />
     <None Remove="Views\User\" />
     <None Remove="Mapping\" />
     <None Remove="Data\" />
@@ -36,9 +33,6 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interface\" />
-    <Folder Include="Extentions\" />
-    <Folder Include="Comparer\" />
     <Folder Include="Views\User\" />
     <Folder Include="Mapping\" />
     <Folder Include="Data\" />

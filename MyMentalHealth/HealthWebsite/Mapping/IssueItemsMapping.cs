@@ -23,12 +23,14 @@ namespace MyMentalHealth.Models
         [Display(Name = "Resource Type")]
         public int ResourceTypeId { get; set; }
 
-        
         //public virtual ICollection<SelectListItem> ResourceTypes { get; set; }
 
-        public List<ResourceTypes> ResourceTypes { get; set; }
+        //public List<ResourceTypes> ResourceTypes { get; set; }
 
-        public int ContentId { get; set; }
+
+
+
+
     }
 }
 

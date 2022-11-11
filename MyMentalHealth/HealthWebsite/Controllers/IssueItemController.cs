@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using MyMentalHealth.Extentions;
 using MyMentalHealth.Models;
 
 namespace MyMentalHealth.Controllers
@@ -26,7 +25,7 @@ namespace MyMentalHealth.Controllers
         {
             List<IssueItems> listOfIssueItems = await (from issueItem in _context.IssueItems
                                                        join contentItem in _context.Contents
-                                                       on issueItem.Id equals contentItem.IssueItems.Id
+                                                       on issueItem.Id equals contentItem.IssueItemsId
                                                        into group1
                                                        from subContent in group1.DefaultIfEmpty()
                                                        where issueItem.MentalHealthIssueId == mentalHealthIssueId
@@ -41,7 +40,7 @@ namespace MyMentalHealth.Controllers
                                                        }).ToListAsync();
 
 
-
+            
             ViewBag.MentalHealthIssueId = mentalHealthIssueId;
             return View(listOfIssueItems);
         }
@@ -63,7 +62,7 @@ namespace MyMentalHealth.Controllers
 
             return View(issueItems);
         }
-
+        /*
         // GET: IssueItem/Create
         public async Task<IActionResult> Create(int mentalHealthIssueId)
         {
@@ -79,10 +78,9 @@ namespace MyMentalHealth.Controllers
                 ResourceTypes = resourceTypes
             };
             return View(NewIssueItems);
-        }
-
-
-        [HttpPost]
+        }*/
+        
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Title,Description,MentalHealthIssueId,ResourceTypeId")] IssueItemsMapping issueItems)
         {
@@ -95,16 +93,77 @@ namespace MyMentalHealth.Controllers
                     MentalHealthIssueId = issueItems.MentalHealthIssueId,
                     ResourceTypeId = issueItems.ResourceTypeId
                 };
+                List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+                issueItems.ResourceTypes = resourceTypes;
+
                 _context.Add(newIssueItems);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index), "MentalHealthIssue");
+            }
+            //List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+            //issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
+            //issueItems.ResourceTypes = resourceTypes;
+            return View(issueItems);
+        }
+        */
+        public async Task<IActionResult> Create(int mentalHealthIssueId)
+        {
+            List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+            IssueItemsMapping issueItems = new IssueItemsMapping
+            {
+                MentalHealthIssueId = mentalHealthIssueId,
+                //ResourceTypes = resourceTypes
+            };
+            List<SelectListItem> ResourceList = new List<SelectListItem>();
+            foreach(var resource in resourceTypes)
+            {
+                var newitem = new SelectListItem
+                {
+                    Text = resource.Title,
+                    Value = resource.Id.ToString()
+                };
+                ResourceList.Add(newitem);
+            }
+
+            ViewBag.ResourceList = ResourceList;
+            return View(issueItems);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Title,Description,MentalHealthIssueId,ResourceTypeId")] IssueItemsMapping issueItems)
+        {
+            if (ModelState.IsValid)
+            {
+                IssueItems items = new IssueItems
+                {
+                    Title = issueItems.Title,
+                    Description = issueItems.Description,
+                    MentalHealthIssueId = issueItems.MentalHealthIssueId,
+                    ResourceTypeId = issueItems.ResourceTypeId
+                };
+
+                _context.Add(items);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
             }
             List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
-            //issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
-            issueItems.ResourceTypes = resourceTypes;
+            //issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(Int32.Parse(issueItems.ResourceTypeId));
+            //issueItems.ResourceTypes = resourceTypes;
+            List<SelectListItem> ResourceList = new List<SelectListItem>();
+            foreach (var resource in resourceTypes)
+            {
+                var newitem = new SelectListItem
+                {
+                    Text = resource.Title,
+                    Value = resource.Id.ToString()
+                };
+                ResourceList.Add(newitem);
+            }
+
+            ViewBag.ResourceList = ResourceList;
             return View(issueItems);
         }
-
+        /*
         // GET: IssueItem/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -160,6 +219,105 @@ namespace MyMentalHealth.Controllers
             List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
             issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
 
+            return View(issueItems);
+        }
+        */
+        // GET: IssueItem/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.IssueItems == null)
+            {
+                return NotFound();
+            }
+            List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+
+            List<SelectListItem> ResourceList = new List<SelectListItem>();
+            foreach (var resource in resourceTypes)
+            {
+                var newitem = new SelectListItem
+                {
+                    Text = resource.Title,
+                    Value = resource.Id.ToString()
+                };
+                ResourceList.Add(newitem);
+            }
+
+            ViewBag.ResourceList = ResourceList;
+
+            var issueItems = await _context.IssueItems.FindAsync(id);
+
+            if (issueItems == null)
+            {
+                return NotFound();
+            }
+            IssueItemsMapping issue = new IssueItemsMapping
+            {
+                Id = issueItems.Id,
+                Title = issueItems.Title,
+                Description = issueItems.Description,
+                MentalHealthIssueId = issueItems.MentalHealthIssueId,
+                ResourceTypeId = issueItems.ResourceTypeId
+                
+            };
+
+            return View(issue);
+        }
+
+        // POST: IssueItem/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,MentalHealthIssueId,ResourceTypeId")] IssueItemsMapping issueItems)
+        {
+            if (id != issueItems.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    IssueItems items = new IssueItems
+                    {
+                        Id = issueItems.Id,
+                        Title = issueItems.Title,
+                        Description = issueItems.Description,
+                        MentalHealthIssueId = issueItems.MentalHealthIssueId,
+                        ResourceTypeId = issueItems.ResourceTypeId
+                    };
+
+                    _context.Update(items);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!IssueItemsExists(issueItems.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
+            }
+            List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
+
+            List<SelectListItem> ResourceList = new List<SelectListItem>();
+            foreach (var resource in resourceTypes)
+            {
+                var newitem = new SelectListItem
+                {
+                    Text = resource.Title,
+                    Value = resource.Id.ToString()
+                };
+                ResourceList.Add(newitem);
+            }
+
+            ViewBag.ResourceList = ResourceList;
             return View(issueItems);
         }
         // GET: IssueItem/Delete/5
