@@ -10,27 +10,31 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
 using Newtonsoft.Json;
+using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Controllers
 {
     [Authorize]
-    public class DailyCheckinsController : Controller
+    public class DailyCheckinsController : Controller, Interface.IDailyCheckinsObserver
     {
         private readonly MymentalhealthContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private IDailyCheckinsObserver _dailyCheckinsObserver;
         
 
-        public DailyCheckinsController(MymentalhealthContext context, IHttpContextAccessor httpContextAccessor)
+        public DailyCheckinsController(MymentalhealthContext context, IHttpContextAccessor httpContextAccessor, IDailyCheckinsObserver dailyCheckinsObserver)
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;
+            _dailyCheckinsObserver = dailyCheckinsObserver;
         }
 
         // GET: DailyCheckins
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index() 
         {
             int UserId = Int32.Parse(_httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(i => i.Type == "Id").Value);
 
+            //_dailyCheckinsObserver.update(_context.DailyCheckins.Id, Feeling, Date, UserId) { }
 
             var events = _context.DailyCheckins.Where(x => x.UserId == UserId).Select(x => new
             {
@@ -176,6 +180,11 @@ namespace MyMentalHealth.Controllers
         private bool DailyCheckinsExists(int id)
         {
             return _context.DailyCheckins.Any(e => e.Id == id);
+        }
+
+        public void update(int Id, string Feeling, DateTime Date, int UserId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
