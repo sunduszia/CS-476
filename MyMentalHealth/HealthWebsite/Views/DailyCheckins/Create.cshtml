@@ -15,7 +15,7 @@
         <div class="col-md-4">
             <form asp-action="Create">
                 <input type="hidden" asp-for="UserId" value="@ViewData["UserId"]" />
-                <input type="hidden" asp-for="Date" value="@DateTime.Now.Date" />
+                <input type="hidden" asp-for="Date" value="@DateTime.Now.Date " />
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
