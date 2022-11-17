@@ -9,16 +9,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
+using MyMentalHealth.Models.Observers;
+
 
 namespace MyMentalHealth.Controllers
 {
     public class ContentController : Controller
     {
         private readonly MymentalhealthContext _context;
+        private readonly Contents _contents;
 
         public ContentController(MymentalhealthContext context)
         {
             _context = context;
+            _contents = new Contents();
+            _contents.Register(new HTMLContentFormatter());
+
         }
         // GET: Content/Create
         public IActionResult Create(int issueItemId, int mentalHealthIssueId)
@@ -146,6 +152,7 @@ namespace MyMentalHealth.Controllers
                         VideoLink = contents.VideoLink,
                         IssueItemsId = contents.IssueItemsId
                     };
+
                     _context.Update(newContent);
                     await _context.SaveChangesAsync();
                 }

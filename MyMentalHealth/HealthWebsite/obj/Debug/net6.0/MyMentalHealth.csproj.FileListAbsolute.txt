@@ -609,9 +609,7 @@
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/staticwebassets.build.json
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/staticwebassets.development.json
-/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/bundle/MyMentalHealth.styles.css
-/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/scopedcss/projectbundle/MyMentalHealth.bundle.scp.css
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.csproj.CopyComplete
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/MyMentalHealth.dll
 /Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/Debug/net6.0/refint/MyMentalHealth.dll

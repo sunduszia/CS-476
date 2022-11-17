@@ -103,6 +103,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudGFsSGVhbHRoSXNzdWUvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Questionnaire/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25uYWlyZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Questionnaire/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25uYWlyZS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Questionnaire/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25uYWlyZS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Questionnaire/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25uYWlyZS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Questionnaire/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25uYWlyZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/ResourceType/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzb3VyY2VUeXBlL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -125,6 +145,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/Views/Shared/_LoginPartial.cshtml]
