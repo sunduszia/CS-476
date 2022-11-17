@@ -5,7 +5,7 @@ using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Models
 {
-    public class ResourceTypes:IProperties
+    public class ResourceTypes
     {
         [Key]
         public int Id { get; set; }

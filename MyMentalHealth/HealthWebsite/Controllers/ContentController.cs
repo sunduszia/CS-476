@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -9,20 +10,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
+using MyMentalHealth.Models.Observers;
 
 namespace MyMentalHealth.Controllers
 {
     public class ContentController : Controller
     {
         private readonly MymentalhealthContext _context;
+        private readonly Contents _contents;
 
         public ContentController(MymentalhealthContext context)
         {
             _context = context;
+            _contents = new Contents();
+           
         }
 
-
-
+        
+       
 
         // GET: Content/Create
         public IActionResult Create(int issueItemId, int mentalHealthIssueId)
@@ -68,6 +73,7 @@ namespace MyMentalHealth.Controllers
             {
                 return NotFound();
             }
+
             return View(contents);
         }
 
@@ -89,6 +95,8 @@ namespace MyMentalHealth.Controllers
                 {
                     _context.Update(contents);
                     await _context.SaveChangesAsync();
+                    _contents.Register(new HTMLContentFormatter());
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {

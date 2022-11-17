@@ -6,7 +6,7 @@ using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Models
 {
-    public class DailyCheckins : DailyCheckinsSubject
+    public class DailyCheckins 
     {
         [Key]
         public int Id { get; set; }
@@ -20,25 +20,25 @@ namespace MyMentalHealth.Models
 
         public int UserId { get; set; }
 
-        List<IDailyCheckinsObserver> DailyCheckinsSubject.observerList => throw new NotImplementedException();
+        //List<IDailyCheckinsObserver> DailyCheckinsSubject.observerList => throw new NotImplementedException();
 
-        void DailyCheckinsSubject.notify()
-        {
-            foreach (IDailyCheckinsObserver observer in DailyCheckinsSubject.observerList)
-            {
-                observer.update(Id, Feeling, Date, UserId);
-            }
-        }
+        //void DailyCheckinsSubject.notify()
+        //{
+        //    foreach (IDailyCheckinsObserver observer in DailyCheckinsSubject.observerList)
+        //    {
+        //        observer.update(Id, Feeling, Date, UserId);
+        //    }
+        //}
 
-        void DailyCheckinsSubject.register(IDailyCheckinsObserver observer)
-        {
-            observerList.Add(observer);
-        }
+        //void DailyCheckinsSubject.register(IDailyCheckinsObserver observer)
+        //{
+        //    observerList.Add(observer);
+        //}
 
-        void DailyCheckinsSubject.unregister(IDailyCheckinsObserver observer)
-        {
-            observerList.Remove(observer);
-        }
+        //void DailyCheckinsSubject.unregister(IDailyCheckinsObserver observer)
+        //{
+        //    observerList.Remove(observer);
+        //}
 
         //void getState()
         //{

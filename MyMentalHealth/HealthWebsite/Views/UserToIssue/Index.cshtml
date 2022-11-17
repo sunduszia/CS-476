@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<MyMentalHealth.Models.MentalHealthIssues>
-@using MyMentalHealth.Extentions
 @using MyMentalHealth.Models
 
 <h2 class="mt-4">Manage Users for each Health Issue</h2>
@@ -10,9 +9,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <h4>Mental Health Issue</h4>
-                <select id="MentalHealthIssueId" name="MentalHealthIssueId" class="form-control" asp-items="Model.ConvertToSelectList(1)">
-                    <option value="0">Please choose a MentalHealthIssue</option>
-                </select>
+                
             </div>
         </div>
     </div>

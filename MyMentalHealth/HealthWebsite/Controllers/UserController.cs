@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Data;
+using MyMentalHealth.Interface;
 using MyMentalHealth.Models;
 
 namespace MyMentalHealth.Controllers
@@ -17,15 +18,14 @@ namespace MyMentalHealth.Controllers
     {
         private readonly MymentalhealthContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly IDataFunctions _dataFunctions;
+        private IDailyCheckinsObserver _dailyCheckinsObserver;
 
 
-
-        public UserController(MymentalhealthContext context, IHttpContextAccessor httpContextAccessor, IDataFunctions dataFunctions)
+        public UserController(MymentalhealthContext context, IHttpContextAccessor httpContextAccessor, IDailyCheckinsObserver dailyCheckinsObserver)
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;
-            _dataFunctions = dataFunctions;
+            _dailyCheckinsObserver = dailyCheckinsObserver;
         }
         public ActionResult Login()
         {

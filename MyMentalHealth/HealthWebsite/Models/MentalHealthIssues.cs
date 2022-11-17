@@ -5,7 +5,7 @@ using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Models
 {
-    public class MentalHealthIssues: IProperties
+    public class MentalHealthIssues
     {
         [Key]
         public int Id { get; set; }

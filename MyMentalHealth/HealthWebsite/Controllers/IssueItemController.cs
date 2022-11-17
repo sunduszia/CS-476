@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using MyMentalHealth.Extentions;
+using MyMentalHealth.Interface;
 using MyMentalHealth.Models;
 
 namespace MyMentalHealth.Controllers
@@ -15,10 +15,13 @@ namespace MyMentalHealth.Controllers
     public class IssueItemController : Controller
     {
         private readonly MymentalhealthContext _context;
+        //private DailyCheckinsSubject _dailyCheckinsSubject;
 
         public IssueItemController(MymentalhealthContext context)
         {
             _context = context;
+            //_dailyCheckinsSubject = dailyCheckinsSubject;
+
         }
 
         // GET: IssueItem
@@ -71,7 +74,7 @@ namespace MyMentalHealth.Controllers
             IssueItems issueItems = new IssueItems
             {
                 MentalHealthIssueId = mentalHealthIssueId,
-                ResourceTypes = resourceTypes.ConvertToSelectList(0)
+                //ResourceTypes = resourceTypes.ConvertToSelectList(0)
             };
             IssueItemsMapping NewIssueItems = new IssueItemsMapping
             {
@@ -97,6 +100,8 @@ namespace MyMentalHealth.Controllers
                 };
                 _context.Add(newIssueItems);
                 await _context.SaveChangesAsync();
+                
+
                 return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
             }
             List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
@@ -120,7 +125,7 @@ namespace MyMentalHealth.Controllers
             {
                 return NotFound();
             }
-            issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
+            //issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
 
             return View(issueItems);
         }
@@ -158,7 +163,7 @@ namespace MyMentalHealth.Controllers
                 return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
             }
             List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
-            issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
+            //issueItems.ResourceTypes = resourceTypes.ConvertToSelectList(issueItems.ResourceTypeId);
 
             return View(issueItems);
         }

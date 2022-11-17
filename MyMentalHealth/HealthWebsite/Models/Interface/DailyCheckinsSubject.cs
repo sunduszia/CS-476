@@ -3,7 +3,7 @@ namespace MyMentalHealth.Interface
 {
     public interface DailyCheckinsSubject
     {
-        protected List<IDailyCheckinsObserver> observerList { get; }
+        public List<IDailyCheckinsObserver> observerList { get; set; }
 
         public void register(IDailyCheckinsObserver observer);
         public void unregister(IDailyCheckinsObserver observer);
