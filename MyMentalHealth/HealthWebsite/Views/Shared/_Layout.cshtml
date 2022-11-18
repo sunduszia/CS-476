@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyMentalHealth</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -22,6 +22,27 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <partial name="_MenuPartial" />
+                    </ul>
+                    <ul class="navbar-nav ">
+                        <partial name="_LoginPartial" />
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
+        <nav class="navbar navbar-expand-lg navbar-dark px-3 bg-yellow"  id="headerNav">
+            <div class="container-fluid">
+                <a class="navbar-brand d-block" asp-area="" asp-controller="Home" asp-action="Index">
+                    <h4 class="navbar-brand-heading">MyMentalhealth</h4>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto ">
+                        <partial name="_MenuPartial" />
+                        
                     </ul>
                     <ul class="navbar-nav ">
                         <partial name="_LoginPartial" />
@@ -39,7 +60,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer align-bottom">
         <div class="container">
             &copy; 2022 - MyMentalHealth - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

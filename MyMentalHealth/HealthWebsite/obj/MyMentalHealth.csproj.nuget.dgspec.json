@@ -1,26 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {}
+    "D:\\GitHub\\CS-476\\MyMentalHealth\\HealthWebsite\\MyMentalHealth.csproj": {}
   },
   "projects": {
-    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {
+    "D:\\GitHub\\CS-476\\MyMentalHealth\\HealthWebsite\\MyMentalHealth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+        "projectUniqueName": "D:\\GitHub\\CS-476\\MyMentalHealth\\HealthWebsite\\MyMentalHealth.csproj",
         "projectName": "MyMentalHealth",
-        "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
-        "packagesPath": "/Users/sanakadiwal/.nuget/packages/",
-        "outputPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
+        "projectPath": "D:\\GitHub\\CS-476\\MyMentalHealth\\HealthWebsite\\MyMentalHealth.csproj",
+        "packagesPath": "C:\\Users\\waqar\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\CS-476\\MyMentalHealth\\HealthWebsite\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/sanakadiwal/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\waqar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,6 +68,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.3.0, )"
+            },
+            "Westwind.AspNetCore.LiveReload": {
+              "target": "Package",
+              "version": "[0.3.7, )"
             }
           },
           "imports": [
@@ -85,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

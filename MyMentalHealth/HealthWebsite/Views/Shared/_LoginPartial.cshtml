@@ -18,7 +18,9 @@
             <a class="nav-link text-dark">@User.Claims.FirstOrDefault(i => i.Type == "FirstName").Value</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="User" asp-action="Logout">Logout</a>
+            <a class="nav-link text-dark" asp-controller="User" asp-action="Logout">
+                <button type="button" class="btn btn-default">Logout</button>
+            </a>
         </li>
     }
 
@@ -26,9 +28,40 @@
 else
 {
     <li class="nav-item">
-        <a class="nav-link text-dark" asp-controller="User" asp-action="Register">Register</a>
+        <a class="nav-link text-dark" asp-controller="User" asp-action="Register">
+            <button type="button" class="btn btn-default">Register</button>
+        </a>
     </li>
+    
     <li class="nav-item">
-        <a class="nav-link text-dark" asp-controller="User" asp-action="Login">Student Login</a>
+        <a class="nav-link text-dark" asp-controller="User" asp-action="Login">
+            <button type="button" class="btn btn-default">Student Login</button>
+        </a>
     </li>
 }
+<style>
+    /*Body Styling */
+
+    
+    
+    /* Boostrap Buttons Styling */
+
+    .btn-default {
+        font-family: Raleway-SemiBold;
+        
+        color: #444;
+        letter-spacing: 1px;
+        line-height: 15px;
+        border: 2px solid #444;
+        border-radius: 40px;
+        background: transparent;
+        transition: all 0.3s ease 0s;
+    }
+
+        .btn-default:hover {
+            color: #FFF;
+            background: #444;
+            border: 2px solid #444;
+        }
+
+</style>

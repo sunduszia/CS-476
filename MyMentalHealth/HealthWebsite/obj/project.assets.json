@@ -3787,6 +3787,22 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Westwind.AspNetCore.LiveReload/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Westwind.AspNetCore.LiveReload.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Westwind.AspNetCore.LiveReload.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -10536,6 +10552,25 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Westwind.AspNetCore.LiveReload/0.3.7": {
+      "sha512": "CVUBMkp153EcQRJQiacl49EFJ3jTZEJWi7MQXbazzAhGGc4uF6oCZPDO0MxRPf1YXTx5ZUD2drepTlDxEcV7ZA==",
+      "type": "package",
+      "path": "westwind.aspnetcore.livereload/0.3.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.MD",
+        "icon.png",
+        "lib/net5.0/Westwind.AspNetCore.LiveReload.dll",
+        "lib/net5.0/Westwind.AspNetCore.LiveReload.xml",
+        "lib/net6.0/Westwind.AspNetCore.LiveReload.dll",
+        "lib/net6.0/Westwind.AspNetCore.LiveReload.xml",
+        "lib/netcoreapp3.1/Westwind.AspNetCore.LiveReload.dll",
+        "lib/netcoreapp3.1/Westwind.AspNetCore.LiveReload.xml",
+        "westwind.aspnetcore.livereload.0.3.7.nupkg.sha512",
+        "westwind.aspnetcore.livereload.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -10545,29 +10580,35 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.7",
-      "Swashbuckle.AspNetCore >= 6.3.0"
+      "Swashbuckle.AspNetCore >= 6.3.0",
+      "Westwind.AspNetCore.LiveReload >= 0.3.7"
     ]
   },
   "packageFolders": {
-    "/Users/sanakadiwal/.nuget/packages/": {}
+    "C:\\Users\\waqar\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+      "projectUniqueName": "D:\\GitHub\\CS-476\\MyMentalHealth\\HealthWebsite\\MyMentalHealth.csproj",
       "projectName": "MyMentalHealth",
-      "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
-      "packagesPath": "/Users/sanakadiwal/.nuget/packages/",
-      "outputPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
+      "projectPath": "D:\\GitHub\\CS-476\\MyMentalHealth\\HealthWebsite\\MyMentalHealth.csproj",
+      "packagesPath": "C:\\Users\\waqar\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\CS-476\\MyMentalHealth\\HealthWebsite\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/sanakadiwal/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\waqar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10611,6 +10652,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.3.0, )"
+          },
+          "Westwind.AspNetCore.LiveReload": {
+            "target": "Package",
+            "version": "[0.3.7, )"
           }
         },
         "imports": [
@@ -10632,7 +10677,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
