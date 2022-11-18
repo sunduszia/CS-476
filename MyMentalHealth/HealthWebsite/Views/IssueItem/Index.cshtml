@@ -35,14 +35,40 @@
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
-                    @if (item.ContentId == 0)
+                    @if (item.ResourceTypeId == 1)
                     {
-                        <a asp-controller="Content" asp-action="Create" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Content</a>
+                        @if (item.ContentId == 0)
+                        {
+                            <a asp-controller="Content" asp-action="CreateArticle" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Article</a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Content" asp-action="EditArticle" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Article</a>
+                        }
+                    }
+                    else if (item.ResourceTypeId == 3)
+                    {
+                        @if (item.ContentId == 0)
+                        {
+                            <a asp-controller="Content" asp-action="CreateExercise" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Exercise</a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Content" asp-action="EditExercise" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Exercise</a>
+                        }
                     }
                     else
                     {
-                        <a asp-controller="Content" asp-action="Edit" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Content</a>
+                        @if (item.ContentId == 0)
+                        {
+                            <a asp-controller="Content" asp-action="CreateDefaultContent" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Content</a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Content" asp-action="EditDefaultContent" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Content</a>
+                        }
                     }
+
 
                 </td>
             </tr>
@@ -51,5 +77,16 @@
 </table>
 
 @*
-    
+    @if(item.ResourceTitle == "Article")
+                        {
+
+                        }
+                        else if(item.ResourceTitle == "Exercise")
+                        {
+
+                        }
+                        else
+                {
+
+                }
     asp-route-resourceTypes ="@ViewBag.ResourceTypes"*@

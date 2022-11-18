@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using MyMentalHealth.Data;
+using MyMentalHealth.Models.Interface;
 
 namespace MyMentalHealth.Models
 {
@@ -12,6 +14,7 @@ namespace MyMentalHealth.Models
 
         public int MentalHealthIssueId { get; set; }
 
+        
     }
 }
 

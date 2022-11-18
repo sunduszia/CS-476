@@ -7,17 +7,17 @@ using MyMentalHealth.Models;
 
 namespace MyMentalHealth.Models.Observers
 {
-    public class HTMLContentFormatter : Interface.IObserver<HTMLContentChangedEventArgs>
-    {
+    //public class HTMLContentFormatter : Interface.IObserver<HTMLContentChangedEventArgs>
+    //{
 
 
-        public HTMLContentFormatter()
-        {
+    //    public HTMLContentFormatter()
+    //    {
 
-        }
-        public void Update(object sender, HTMLContentChangedEventArgs e)
-        {
-            Console.WriteLine("Html content changed");
-        }
-    }
+    //    }
+    //    public void Update(object sender, HTMLContentChangedEventArgs e)
+    //    {
+    //        Console.WriteLine("Html content changed");
+    //    }
+    //}
 }

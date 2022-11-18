@@ -219,24 +219,66 @@ namespace MyMentalHealth.Controllers
             return false;
 
         }
-        /*
-         join content in _context.Contents
-                                               on issueItem.Id equals content.IssueItemsId*/
+        
         private async Task<List<MentalHealthIssues>> GetItemsWithContent()
         {
-            var itemsWithContent = await (from issues in _context.MentalHealthIssues
-                                               join issueItem in _context.IssueItems
-                                               on issues.Id equals issueItem.MentalHealthIssueId
-                                               join content in _context.Contents
-                                               on issueItem.Id equals content.IssueItemsId
-                                               select new MentalHealthIssues
-                                               {
-                                                   Id = issues.Id,
-                                                   Title = issues.Title,
-                                                   Description = issues.Description,
-                                                   
-                                               }).Distinct().ToListAsync();
-            return itemsWithContent;
+            //var itemsWithContent1 = await (from issues in _context.MentalHealthIssues
+            //                                   join issueItem in _context.IssueItems
+            //                                   on issues.Id equals issueItem.MentalHealthIssueId
+            //                                   join content in _context.Article
+            //                                   on issueItem.Id equals content.IssueItemsId
+            //                                   select new MentalHealthIssues
+            //                                   {
+            //                                       Id = issues.Id,
+            //                                       Title = issues.Title,
+            //                                       Description = issues.Description,
+
+            //                                   }).Distinct().ToListAsync();
+
+            //var itemsWithContent2 = await (from issues in _context.MentalHealthIssues
+            //                               join issueItem in _context.IssueItems
+            //                               on issues.Id equals issueItem.MentalHealthIssueId
+            //                               join content in _context.Exercise
+            //                               on issueItem.Id equals content.IssueItemsId
+            //                               select new MentalHealthIssues
+            //                               {
+            //                                   Id = issues.Id,
+            //                                   Title = issues.Title,
+            //                                   Description = issues.Description,
+
+            //                               }).Distinct().ToListAsync();
+
+            //var itemsWithContent3 = await (from issues in _context.MentalHealthIssues
+            //                               join issueItem in _context.IssueItems
+            //                               on issues.Id equals issueItem.MentalHealthIssueId
+            //                               join content in _context.DefaultContent
+            //                               on issueItem.Id equals content.IssueItemsId
+            //                               select new MentalHealthIssues
+            //                               {
+            //                                   Id = issues.Id,
+            //                                   Title = issues.Title,
+            //                                   Description = issues.Description,
+
+            //                               }).Distinct().ToListAsync();
+
+            //itemsWithContent1.AddRange(itemsWithContent2);
+            //itemsWithContent1.AddRange(itemsWithContent3);
+
+            //return itemsWithContent1;
+
+            var itemsWithContent1 = await (from issues in _context.MentalHealthIssues
+                                           join issueItem in _context.IssueItems
+                                           on issues.Id equals issueItem.MentalHealthIssueId
+                                           join content in _context.Contents
+                                           on issueItem.Id equals content.IssueItemsId
+                                           select new MentalHealthIssues
+                                           {
+                                               Id = issues.Id,
+                                               Title = issues.Title,
+                                               Description = issues.Description,
+
+                                           }).Distinct().ToListAsync();
+            return itemsWithContent1;
 
         }
         private async Task<List<MentalHealthIssues>> GetItemsSavedForUser(int userId)
@@ -292,7 +334,11 @@ namespace MyMentalHealth.Controllers
 
         private async Task<IEnumerable<IssueItemsDetailsModel>> GetIssuesItemDetails(int userId)
         {
-            return await (from item in _context.IssueItems
+
+
+
+            //var itemsWithDetail =
+                return await (from item in _context.IssueItems
                           join mentalHealthIssue in _context.MentalHealthIssues
                           on item.MentalHealthIssueId equals mentalHealthIssue.Id
                           join content in _context.Contents
@@ -308,9 +354,57 @@ namespace MyMentalHealth.Controllers
                               MentalHealthIssueTitle = mentalHealthIssue.Title,
                               IssueItemId = item.Id,
                               IssueItemTitle = item.Title,
-                              IssueItemDescription = item.Description
+                              IssueItemDescription = item.Description,
+                              ResourceTypeId = resource.Id
+
                               
                           }).ToListAsync();
+
+            //var itemsWithDetail2 = await (from item in _context.IssueItems
+            //                              join mentalHealthIssue in _context.MentalHealthIssues
+            //                              on item.MentalHealthIssueId equals mentalHealthIssue.Id
+            //                              join content in _context.Exercise
+            //                              on item.Id equals content.IssueItemsId
+            //                              join user in _context.UserMentalHealthIssues
+            //                              on mentalHealthIssue.Id equals user.MentalHealthIssueId
+            //                              join resource in _context.ResourceTypes
+            //                              on item.ResourceTypeId equals resource.Id
+            //                              where user.UserId == userId
+            //                              select new IssueItemsDetailsModel
+            //                              {
+            //                                  MentalHealthIssueId = mentalHealthIssue.Id,
+            //                                  MentalHealthIssueTitle = mentalHealthIssue.Title,
+            //                                  IssueItemId = item.Id,
+            //                                  IssueItemTitle = item.Title,
+            //                                  IssueItemDescription = item.Description
+
+            //                              }).ToListAsync();
+
+            //var itemsWithDetail3 = await (from item in _context.IssueItems
+            //                              join mentalHealthIssue in _context.MentalHealthIssues
+            //                              on item.MentalHealthIssueId equals mentalHealthIssue.Id
+            //                              join content in _context.DefaultContent
+            //                              on item.Id equals content.IssueItemsId
+            //                              join user in _context.UserMentalHealthIssues
+            //                              on mentalHealthIssue.Id equals user.MentalHealthIssueId
+            //                              join resource in _context.ResourceTypes
+            //                              on item.ResourceTypeId equals resource.Id
+            //                              where user.UserId == userId
+            //                              select new IssueItemsDetailsModel
+            //                              {
+            //                                  MentalHealthIssueId = mentalHealthIssue.Id,
+            //                                  MentalHealthIssueTitle = mentalHealthIssue.Title,
+            //                                  IssueItemId = item.Id,
+            //                                  IssueItemTitle = item.Title,
+            //                                  IssueItemDescription = item.Description
+
+            //                              }).ToListAsync();
+
+            //var combined = itemsWithDetail1.Concat(itemsWithDetail2);
+            //combined = combined.Concat(itemsWithDetail3);
+
+            //return combined;
+            
         }
 
 

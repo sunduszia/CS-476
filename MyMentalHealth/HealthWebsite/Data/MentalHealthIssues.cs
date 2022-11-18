@@ -1,11 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MyMentalHealth.Models.Interface;
 
 
 namespace MyMentalHealth.Models
 {
-    public class MentalHealthIssues
+    public class MentalHealthIssues 
     {
         [Key]
         public int Id { get; set; }
@@ -22,6 +23,19 @@ namespace MyMentalHealth.Models
 
         [ForeignKey("MentalHealthIssueId")]
         public virtual ICollection<UserMentalHealthIssue> UserMentalHealthIssues { get; set; }
+
+        //public MentalHealthIssues(IMediator mediator) : base(mediator) { }
+
+        //public void Send(string msg)
+        //{
+        //    Console.WriteLine("B send message:" + msg);
+        //    _mediator.SendMessage(this, msg);
+        //}
+
+        //public void Receive(string msg)
+        //{
+        //    Console.WriteLine("B receive message:" + msg);
+        //}
     }
 }
 

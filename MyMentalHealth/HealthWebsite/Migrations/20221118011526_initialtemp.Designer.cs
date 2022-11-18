@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyMentalHealth.Models;
 
@@ -11,9 +12,10 @@ using MyMentalHealth.Models;
 namespace MyMentalHealth.Migrations
 {
     [DbContext(typeof(MymentalhealthContext))]
-    partial class MymentalhealthContextModelSnapshot : ModelSnapshot
+    [Migration("20221118011526_initialtemp")]
+    partial class initialtemp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -240,6 +242,10 @@ namespace MyMentalHealth.Migrations
                 {
                     b.HasBaseType("MyMentalHealth.Models.Contents");
 
+                    b.Property<string>("VideoLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasDiscriminator().HasValue("DefaultContent");
                 });
 
@@ -249,7 +255,8 @@ namespace MyMentalHealth.Migrations
 
                     b.Property<string>("VideoLink")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Exercise_VideoLink");
 
                     b.HasDiscriminator().HasValue("Exercise");
                 });

@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace MyMentalHealth.Models
 {
-    public class ContentMapping
+    public class ExerciseMapping
     {
         public int Id { get; set; }
 
@@ -20,7 +20,7 @@ namespace MyMentalHealth.Models
         public string VideoLink { get; set; }
 
 
-        
+
         public int IssueItemsId { get; set; }
 
         public int MentalHealthIssueId { get; set; }

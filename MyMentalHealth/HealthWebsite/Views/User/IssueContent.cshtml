@@ -36,7 +36,22 @@
                             {
                                 <div class="mt-2">
                                     <h5 class="card-title mt-2">
-                                        <a class="text-dark" asp-controller="Content" asp-action="Show" asp-route-ItemIssueId="@issueItem.IssueItemId">@issueItem.IssueItemTitle</a>
+                                        @if (issueItem.ResourceTypeId == 1)
+                                        {
+
+                                            <a class="text-dark" asp-controller="Content" asp-action="ShowArticle" asp-route-ItemIssueId="@issueItem.IssueItemId">@issueItem.IssueItemTitle</a>
+
+                                        }
+                                        else if (issueItem.ResourceTypeId == 3)
+                                        {
+                                            <a class="text-dark" asp-controller="Content" asp-action="ShowExercise" asp-route-ItemIssueId="@issueItem.IssueItemId">@issueItem.IssueItemTitle</a>
+
+                                        }
+                                        else
+                                        {
+                                            <a class="text-dark" asp-controller="Content" asp-action="ShowDefault" asp-route-ItemIssueId="@issueItem.IssueItemId">@issueItem.IssueItemTitle</a>
+
+                                        }
                                     </h5>
                                     <p class="card-text text-dark mt-2">
                                         @issueItem.IssueItemDescription

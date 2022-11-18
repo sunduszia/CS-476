@@ -22,5 +22,8 @@ public class MymentalhealthContext : DbContext
     public DbSet<IssueItems> IssueItems { get; set; }
     public DbSet<Contents> Contents { get; set; }
     public DbSet<MyMentalHealth.Models.DailyCheckins> DailyCheckins { get; set; }
+    public DbSet<Article> Article { get; set; }
+    public DbSet<Exercise> Exercise { get; set; }
+    public DbSet<DefaultContent> DefaultContent { get; set; }
 
 }

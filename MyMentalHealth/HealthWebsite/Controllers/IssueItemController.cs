@@ -36,15 +36,52 @@ namespace MyMentalHealth.Controllers
                                                            Description = issueItem.Description,
                                                            ResourceTypeId = issueItem.ResourceTypeId,
                                                            MentalHealthIssueId = mentalHealthIssueId,
-                                                           ContentId = (subContent != null) ? subContent.Id : 0
+                                                           ContentId = (subContent != null) ? subContent.Id : 0,
                                                        }).ToListAsync();
+            //List<IssueItems> listOfIssueItems1 = await (from issueItem in _context.IssueItems
+            //                                           join contentItem in _context.Article
+            //                                           on issueItem.Id equals contentItem.IssueItemsId
+            //                                           into group1
+            //                                           from subContent in group1.DefaultIfEmpty()
+            //                                           where issueItem.MentalHealthIssueId == mentalHealthIssueId
+            //                                           select new IssueItems
+            //                                           {
+            //                                               Id = issueItem.Id,
+            //                                               Title = issueItem.Title,
+            //                                               Description = issueItem.Description,
+            //                                               ResourceTypeId = issueItem.ResourceTypeId,
+            //                                               MentalHealthIssueId = mentalHealthIssueId,
+            //                                               ContentId = (subContent != null) ? subContent.Id : 0,
+            //                                               ResourceTitle = "Article"
+            //                                           }).ToListAsync();
+            //List<IssueItems> listOfIssueItems2 = await (from issueItem in _context.IssueItems
+            //                                           join contentItem in _context.Exercise
+            //                                           on issueItem.Id equals contentItem.IssueItemsId
+            //                                           into group1
+            //                                           from subContent in group1.DefaultIfEmpty()
+            //                                           where issueItem.MentalHealthIssueId == mentalHealthIssueId
+            //                                           select new IssueItems
+            //                                           {
+            //                                               Id = issueItem.Id,
+            //                                               Title = issueItem.Title,
+            //                                               Description = issueItem.Description,
+            //                                               ResourceTypeId = issueItem.ResourceTypeId,
+            //                                               MentalHealthIssueId = mentalHealthIssueId,
+            //                                               ContentId = (subContent != null) ? subContent.Id : 0,
+            //                                               ResourceTitle = "Exercise"
 
-
+            //                                           }).ToListAsync();
             
+            //listOfIssueItems1.AddRange(listOfIssueItems2);
+            //listOfIssueItems1.AddRange(listOfIssueItems3);
             ViewBag.MentalHealthIssueId = mentalHealthIssueId;
             return View(listOfIssueItems);
         }
-
+        public string GetResourceTitle(int resourceTypeId)
+        {
+            var resource = _context.ResourceTypes.FirstOrDefault(e => e.Id == resourceTypeId);
+            return resource.Title;
+        }
         // GET: IssueItem/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -124,7 +161,6 @@ namespace MyMentalHealth.Controllers
                 };
                 ResourceList.Add(newitem);
             }
-
             ViewBag.ResourceList = ResourceList;
             return View(issueItems);
         }
@@ -163,6 +199,7 @@ namespace MyMentalHealth.Controllers
             ViewBag.ResourceList = ResourceList;
             return View(issueItems);
         }
+       
         /*
         // GET: IssueItem/Edit/5
         public async Task<IActionResult> Edit(int? id)
