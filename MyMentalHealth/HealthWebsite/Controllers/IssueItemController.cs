@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -7,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
+using MyMentalHealth.Models.Interface;
+using MyMentalHealth.Models.Observers;
 
 namespace MyMentalHealth.Controllers
 {
@@ -14,15 +17,25 @@ namespace MyMentalHealth.Controllers
     public class IssueItemController : Controller
     {
         private readonly MymentalhealthContext _context;
+        private readonly IIssueItemsService _issueItemsService;
 
-        public IssueItemController(MymentalhealthContext context)
+        //private readonly ConcreteMediator _concreteMediator;
+        //private readonly IMediator _mediator;
+
+
+        public IssueItemController(MymentalhealthContext context, IIssueItemsService issueItemsService)
         {
             _context = context;
+            _issueItemsService = issueItemsService;
+            //_concreteMediator = concreteMediator;
+            //_mediator = mediator;
         }
 
         // GET: IssueItem
+        // public async Task<IActionResult> Index(MentalHealthIssues mentalHealthIssueId)
         public async Task<IActionResult> Index(int mentalHealthIssueId)
         {
+            //var tempMentalHealthIssueId = _concreteMediator.Send(mentalHealthIssueId);
             List<IssueItems> listOfIssueItems = await (from issueItem in _context.IssueItems
                                                        join contentItem in _context.Contents
                                                        on issueItem.Id equals contentItem.IssueItemsId
@@ -327,6 +340,12 @@ namespace MyMentalHealth.Controllers
 
                     _context.Update(items);
                     await _context.SaveChangesAsync();
+                    Debug.WriteLine("Attaching Observers...");
+                    var editObserver = new EditObserver();
+                    _issueItemsService.Register(editObserver);
+                    Debug.WriteLine("Updating Issue Item");
+                    _issueItemsService.UpdateIssueItem(items);
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -339,6 +358,7 @@ namespace MyMentalHealth.Controllers
                         throw;
                     }
                 }
+                
                 return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
             }
             List<ResourceTypes> resourceTypes = await _context.ResourceTypes.ToListAsync();
@@ -389,8 +409,13 @@ namespace MyMentalHealth.Controllers
             {
                 _context.IssueItems.Remove(issueItems);
             }
-
+            
             await _context.SaveChangesAsync();
+            Debug.WriteLine("Attaching Observers...");
+            var deleteObserver = new DeleteObserver();
+            _issueItemsService.Register(deleteObserver);
+            Debug.WriteLine("Updating Issue Item");
+            _issueItemsService.UpdateIssueItem(issueItems);
             return RedirectToAction(nameof(Index), new { mentalHealthIssueId = issueItems.MentalHealthIssueId });
         }
 

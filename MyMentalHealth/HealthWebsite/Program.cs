@@ -2,7 +2,11 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using MyMentalHealth.Controllers;
 using MyMentalHealth.Models;
+using MyMentalHealth.Models.Interface;
+using MyMentalHealth.Models.Observers;
+using NuGet.Protocol.Core.Types;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +17,14 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 .AddCookie();
 
 builder.Services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<IIssueItemsService, IssueItemService>();
+
+//builder.Services.AddScoped<IMediator, ConcreteMediator>();
+//builder.Services.AddScoped<Colleague, MentalHealthIssues>();
+//builder.Services.AddScoped<Colleague, IssueItems>();
+//builder.Services.AddScoped<IMediator, ConcreteMediator>();
+
+
 
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

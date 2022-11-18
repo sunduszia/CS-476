@@ -6,7 +6,7 @@ using MyMentalHealth.Models.Interface;
 
 namespace MyMentalHealth.Models
 {
-    public class MentalHealthIssues 
+    public class MentalHealthIssues
     {
         [Key]
         public int Id { get; set; }
@@ -26,16 +26,11 @@ namespace MyMentalHealth.Models
 
         //public MentalHealthIssues(IMediator mediator) : base(mediator) { }
 
-        //public void Send(string msg)
+        //public int Send(MentalHealthIssues mentalHealthIssues)
         //{
-        //    Console.WriteLine("B send message:" + msg);
-        //    _mediator.SendMessage(this, msg);
+        //    return mediator.Send(this);
         //}
-
-        //public void Receive(string msg)
-        //{
-        //    Console.WriteLine("B receive message:" + msg);
-        //}
+        
     }
 }
 

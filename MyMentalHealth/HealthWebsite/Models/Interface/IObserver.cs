@@ -1,9 +1,8 @@
 ﻿using System;
 namespace MyMentalHealth.Models.Interface
 {
-    public interface IObserver<in T>
-        where T : EventArgs
+    public interface IObserver
     {
-        void Update(Object sender, T e);
+        void Update(IssueItems issueItems);
     }
 }

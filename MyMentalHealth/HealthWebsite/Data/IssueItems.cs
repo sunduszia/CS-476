@@ -29,10 +29,18 @@ namespace MyMentalHealth.Models
 
         [NotMapped]
         public int ContentId { get; set; }
-
+        
         //[NotMapped]
         //public string ResourceTitle { get; set; }
 
+        //public IssueItems(IMediator mediator)
+        //    : base(mediator)
+        //{
+        //}
+        //public int Send(IssueItems issueItems)
+        //{
+        //    return mediator.Send(this);
+        //}
 
     }
 }

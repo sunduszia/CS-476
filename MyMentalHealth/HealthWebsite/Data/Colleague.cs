@@ -5,11 +5,11 @@ namespace MyMentalHealth.Models
 {
     public abstract class Colleague
     {
-        protected IMediator _mediator;
+        protected IMediator mediator;
 
         public Colleague(IMediator mediator)
         {
-            _mediator = mediator;
+            this.mediator = mediator;
         }
     }
 }

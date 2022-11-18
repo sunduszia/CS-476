@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
+using MyMentalHealth.Models.Interface;
 
 namespace MyMentalHealth.Controllers
 {
@@ -15,15 +16,20 @@ namespace MyMentalHealth.Controllers
     public class MentalHealthIssueController : Controller
     {
         private readonly MymentalhealthContext _context;
+        //private readonly ConcreteMediator _concreteMediator;
+        //private readonly IMediator _mediator;
 
         public MentalHealthIssueController(MymentalhealthContext context)
         {
             _context = context;
+            //_concreteMediator = concreteMediator;
+            //_mediator = mediator;
         }
 
         // GET: MentalHealthIssue
         public async Task<IActionResult> Index()
         {
+             
               return View(await _context.MentalHealthIssues.ToListAsync());
         }
 

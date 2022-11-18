@@ -1,11 +1,12 @@
 ﻿using System;
 namespace MyMentalHealth.Models.Interface
 {
-    public interface ISubject<out T>
-        where T : EventArgs
+    public interface ISubject
     {
-        void Register(IObserver<T> observer);
-        void UnRegister(IObserver<T> observer);
+        void Register(IObserver observer);
+        void UnRegister(IObserver observer);
+        void Notify(IssueItems issueItems);
+
     }
 }
 

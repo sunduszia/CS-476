@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
+using MyMentalHealth.Models.Interface;
 
 namespace MyMentalHealth.Controllers
 {
@@ -16,14 +17,15 @@ namespace MyMentalHealth.Controllers
     {
         private readonly MymentalhealthContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        
 
+        //private readonly IMediator _mediator;
 
 
         public UserController(MymentalhealthContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;
+            //_mediator = mediator;
         }
         public ActionResult Login()
         {
