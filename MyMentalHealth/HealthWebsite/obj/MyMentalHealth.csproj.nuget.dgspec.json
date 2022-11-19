@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {}
+    "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {}
   },
   "projects": {
-    "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {
+    "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+        "projectUniqueName": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
         "projectName": "MyMentalHealth",
-        "projectPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
-        "packagesPath": "/Users/sanakadiwal/.nuget/packages/",
-        "outputPath": "/Users/sanakadiwal/Documents/GitHub/CS-476/MyMentalHealth/HealthWebsite/obj/",
+        "projectPath": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+        "packagesPath": "/Users/uzbanasir/.nuget/packages/",
+        "outputPath": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sanakadiwal/.nuget/NuGet/NuGet.Config"
+          "/Users/uzbanasir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,6 +63,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.3.0, )"
+            },
+            "Westwind.AspNetCore.LiveReload": {
+              "target": "Package",
+              "version": "[0.3.7, )"
             }
           },
           "imports": [
