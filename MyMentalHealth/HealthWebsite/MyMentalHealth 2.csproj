@@ -20,8 +20,12 @@
     <None Remove="Views\User\" />
     <None Remove="Mapping\" />
     <None Remove="Data\" />
-    <None Remove="Interface\" />
-    <None Remove="Observers\" />
+<<<<<<< Updated upstream
+    <None Remove="Models\Interface\" />
+    <None Remove="Models\Observers\" />
+=======
+    <None Remove="Migrations\" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
@@ -33,13 +37,16 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
-    <PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.3.7" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\User\" />
     <Folder Include="Mapping\" />
     <Folder Include="Data\" />
-    <Folder Include="Interface\" />
-    <Folder Include="Observers\" />
+<<<<<<< Updated upstream
+    <Folder Include="Models\Interface\" />
+    <Folder Include="Models\Observers\" />
+=======
+    <Folder Include="Migrations\" />
+>>>>>>> Stashed changes
   </ItemGroup>
 </Project>

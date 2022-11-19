@@ -27,15 +27,15 @@ builder.Services.AddScoped<IIssueItemsService, IssueItemService>();
 
 
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<MymentalhealthContext>(options =>
-    options.UseSqlServer(connectionString));
+//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+//builder.Services.AddDbContext<MymentalhealthContext>(options =>
+//    options.UseSqlServer(connectionString));
 
-/*
+
 builder.Services.AddDbContext<MymentalhealthContext>(
-    o => o.UseNpgsql(builder.Configuration.GetConnectionString("Default"))
+    o => o.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
     );
-*/
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

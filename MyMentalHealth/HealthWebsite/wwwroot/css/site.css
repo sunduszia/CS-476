@@ -1,5 +1,6 @@
 ﻿html {
   font-size: 14px;
+  font-family:Verdana,sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -7,12 +8,48 @@
     font-size: 16px;
   }
 }
-
-html {
-  position: relative;
-  min-height: 100%;
+@media screen and (min-width:992px) {
+    .nav-item {
+        line-height: 30px;
+    }
 }
-
+.nav-item:hover {
+    color: #000;
+}
+.navbar{
+    font-size:16px;
+}
+.navbar-brand{
+    padding-bottom: 0 !important;
+}
+.navbar-brand-heading{
+    color:#444;
+}
+.text-black{
+    color:#444;
+    font-size:16px !important;
+}
+.bg-yellow {
+    background-color: #FFC82E;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+.footer {
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding:20px;
+    text-decoration:none;
+}
+.footer a{
+    text-decoration:none;
+    color:#c0c0c0;
+}
 body {
   margin-bottom: 60px;
 }
