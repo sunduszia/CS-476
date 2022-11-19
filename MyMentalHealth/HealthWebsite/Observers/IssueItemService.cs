@@ -1,7 +1,8 @@
 ﻿using System;
-using MyMentalHealth.Models.Interface;
+using MyMentalHealth.Interface;
+using MyMentalHealth.Models;
 
-namespace MyMentalHealth.Models.Observers
+namespace MyMentalHealth.Observers
 {
     public class IssueItemService: IIssueItemsService
     {
@@ -15,6 +16,7 @@ namespace MyMentalHealth.Models.Observers
                 observer.Update(issueItems);
             }
         }
+
 
         public void Register(IObserver observer)
         {

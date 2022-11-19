@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
-using MyMentalHealth.Models.Interface;
+using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Controllers
 {

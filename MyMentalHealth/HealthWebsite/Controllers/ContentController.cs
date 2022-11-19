@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
-using MyMentalHealth.Models.Observers;
+using MyMentalHealth.Observers;
 
 
 namespace MyMentalHealth.Controllers
@@ -99,7 +99,7 @@ namespace MyMentalHealth.Controllers
         }
         */
 
-
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateArticle(int issueItemId, int mentalHealthIssueId)
         {
             ArticleMapping article = new ArticleMapping
@@ -112,7 +112,7 @@ namespace MyMentalHealth.Controllers
             return View(article);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateArticle([Bind("Title,HTMLContent,IssueItemsId,MentalHealthIssueId")] ArticleMapping article)
@@ -137,7 +137,7 @@ namespace MyMentalHealth.Controllers
             return View(article);
         }
 
-
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateExercise(int issueItemId, int mentalHealthIssueId)
         {
             ExerciseMapping exercise = new ExerciseMapping
@@ -150,7 +150,7 @@ namespace MyMentalHealth.Controllers
             return View(exercise);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateExercise([Bind("Title,HTMLContent,VideoLink,IssueItemsId,MentalHealthIssueId")] ExerciseMapping exercise)
@@ -175,6 +175,8 @@ namespace MyMentalHealth.Controllers
             ViewBag.IssueItemsId = exercise.IssueItemsId;
             return View(exercise);
         }
+
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateDefaultContent(int issueItemId, int mentalHealthIssueId)
         {
             DefaultContentMapping defaultContent = new DefaultContentMapping
@@ -186,6 +188,8 @@ namespace MyMentalHealth.Controllers
             ViewBag.IssueItemsId = issueItemId;
             return View(defaultContent);
         }
+
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateDefaultContent([Bind("Title,HTMLContent,IssueItemsId,MentalHealthIssueId")] DefaultContentMapping defaultContent)
@@ -209,7 +213,7 @@ namespace MyMentalHealth.Controllers
             ViewBag.IssueItemsId = defaultContent.IssueItemsId;
             return View(defaultContent);
         }
-        
+
         /*
         GET: Content/Edit/5
         public async Task<IActionResult> Edit(int issueItemId, int mentalHealthIssueId)
@@ -286,6 +290,7 @@ namespace MyMentalHealth.Controllers
         }
         
         */
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> EditArticle(int issueItemId, int mentalHealthIssueId)
         {
             if (issueItemId == 0 || _context.Contents == null)
@@ -314,7 +319,7 @@ namespace MyMentalHealth.Controllers
             return View(newArticle);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditArticle(int id, [Bind("Id,Title,HTMLContent,IssueItemsId,MentalHealthIssueId")] ArticleMapping newArticle)
@@ -356,7 +361,8 @@ namespace MyMentalHealth.Controllers
             ViewBag.IssueItemsId = newArticle.IssueItemsId;
             return View(newArticle);
         }
-        
+
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> EditExercise(int issueItemId, int mentalHealthIssueId)
         {
             if (issueItemId == 0 || _context.Contents == null)
@@ -386,7 +392,7 @@ namespace MyMentalHealth.Controllers
             return View(newExercise);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditExercise(int id, [Bind("Id,Title,HTMLContent,VideoLink,IssueItemsId,MentalHealthIssueId")] ExerciseMapping newExercise)
@@ -431,8 +437,8 @@ namespace MyMentalHealth.Controllers
         }
 
 
-        
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> EditDefaultContent(int issueItemId, int mentalHealthIssueId)
         {
             if (issueItemId == 0 || _context.Contents == null)
@@ -461,8 +467,8 @@ namespace MyMentalHealth.Controllers
             return View(newDefaultContent);
         }
 
-       
-        
+
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditDefaultContent(int id, [Bind("Id,Title,HTMLContent,IssueItemsId,MentalHealthIssueId")] DefaultContentMapping newDefaultContent)
@@ -519,7 +525,7 @@ namespace MyMentalHealth.Controllers
             return View(content);
         }
         */
-        
+        [Authorize]
         public async Task<IActionResult> ShowArticle(int itemIssueId)
         {
             Article content = await (from item in _context.Article
@@ -533,6 +539,7 @@ namespace MyMentalHealth.Controllers
             return View(content);
         }
 
+        [Authorize]
         public async Task<IActionResult> ShowExercise(int itemIssueId)
         {
             Exercise content = await (from item in _context.Exercise
@@ -547,6 +554,7 @@ namespace MyMentalHealth.Controllers
             return View(content);
         }
 
+        [Authorize]
         public async Task<IActionResult> ShowDefault(int itemIssueId)
         {
             DefaultContent content = await (from item in _context.DefaultContent

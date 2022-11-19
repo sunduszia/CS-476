@@ -1,5 +1,7 @@
 ﻿using System;
-namespace MyMentalHealth.Models.Interface
+using MyMentalHealth.Models;
+
+namespace MyMentalHealth.Interface
 {
     public interface ISubject
     {

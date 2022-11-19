@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyMentalHealth.Models;
-using MyMentalHealth.Models.Interface;
+using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Controllers
 {

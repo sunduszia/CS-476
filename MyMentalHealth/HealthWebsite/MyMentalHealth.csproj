@@ -20,8 +20,8 @@
     <None Remove="Views\User\" />
     <None Remove="Mapping\" />
     <None Remove="Data\" />
-    <None Remove="Models\Interface\" />
-    <None Remove="Models\Observers\" />
+    <None Remove="Interface\" />
+    <None Remove="Observers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
@@ -38,7 +38,7 @@
     <Folder Include="Views\User\" />
     <Folder Include="Mapping\" />
     <Folder Include="Data\" />
-    <Folder Include="Models\Interface\" />
-    <Folder Include="Models\Observers\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Observers\" />
   </ItemGroup>
 </Project>

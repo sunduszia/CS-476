@@ -11,6 +11,7 @@ using MyMentalHealth.Models;
 
 namespace MyMentalHealth.Controllers
 {
+    
     public class UserManageController : Controller
     {
         private readonly MymentalhealthContext _context;

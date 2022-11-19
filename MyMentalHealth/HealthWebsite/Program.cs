@@ -4,8 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using MyMentalHealth.Controllers;
 using MyMentalHealth.Models;
-using MyMentalHealth.Models.Interface;
-using MyMentalHealth.Models.Observers;
+using MyMentalHealth.Interface;
+using MyMentalHealth.Observers;
 using NuGet.Protocol.Core.Types;
 
 var builder = WebApplication.CreateBuilder(args);

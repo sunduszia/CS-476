@@ -1,7 +1,8 @@
 ﻿using System;
-using MyMentalHealth.Models.Interface;
+using MyMentalHealth.Interface;
+using MyMentalHealth.Models;
 
-namespace MyMentalHealth.Models.Observers
+namespace MyMentalHealth.Observers
 {
     public class EditObserver: IObserver
     {
@@ -11,6 +12,8 @@ namespace MyMentalHealth.Models.Observers
             Console.WriteLine("IssueItem No '{0}' is updated.",
              issueItems.Id);
         }
+
+        
     }
 }
 

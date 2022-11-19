@@ -76,7 +76,7 @@ namespace MyMentalHealth.Controllers
         {
             return View();
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult AdminViewChats()
         {

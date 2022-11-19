@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations.Schema;
-using MyMentalHealth.Models.Interface;
+using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Models
 {

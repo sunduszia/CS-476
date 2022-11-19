@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using MyMentalHealth.Models.Interface;
+using MyMentalHealth.Interface;
 
 namespace MyMentalHealth.Models
 {
