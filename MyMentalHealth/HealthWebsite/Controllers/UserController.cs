@@ -357,7 +357,8 @@ namespace MyMentalHealth.Controllers
                               IssueItemId = item.Id,
                               IssueItemTitle = item.Title,
                               IssueItemDescription = item.Description,
-                              ResourceTypeId = resource.Id
+                              ResourceTypeId = resource.Id,
+                              ResourceTitle = resource.Title
 
                               
                           }).ToListAsync();

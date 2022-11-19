@@ -9,6 +9,7 @@ namespace MyMentalHealth.Models
         public string IssueItemTitle { get; set; }
         public string IssueItemDescription { get; set; }
         public int ResourceTypeId { get; set; }
+        public string ResourceTitle { get; set; }
     }
 }
 
