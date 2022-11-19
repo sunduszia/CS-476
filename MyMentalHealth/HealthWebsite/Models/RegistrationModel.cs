@@ -15,6 +15,8 @@ namespace MyMentalHealth.Models
         public string LastName { get; set; }
 
         [Required]
+        [RegularExpression(@"^[0-9]{9}$",
+         ErrorMessage = "Student Id should contain exactly 9 digits")]
         [Display(Name = "Student ID")]
         public int StudentId { get; set; }
 
@@ -25,6 +27,8 @@ namespace MyMentalHealth.Models
 
         [Required]
         [DataType(DataType.Password)]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$",
+         ErrorMessage = "Password should contain at least one Upper case character, one lower case character, one digit, one special character, and must be 8 or more characters long")]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
