@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GSW88g9O6eelDsB/nmKRxuzDaic2W0r8S1eRWcKQwbc=",
+  "Hash": "IKFWj6gAd6ZyeStWq6R2COmCK+KtM4ZJl1RnTY3oE4E=",
   "Source": "MyMentalHealth",
   "BasePath": "_content/MyMentalHealth",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/wwwroot/css/bootstrap.css",
+      "SourceId": "MyMentalHealth",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/wwwroot/",
+      "BasePath": "_content/MyMentalHealth",
+      "RelativePath": "css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/bootstrap.css"
+    },
     {
       "Identity": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/wwwroot/css/images/High-School-Students.jpg",
       "SourceId": "MyMentalHealth",

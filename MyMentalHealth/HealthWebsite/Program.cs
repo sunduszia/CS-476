@@ -33,7 +33,7 @@ builder.Services.AddScoped<IIssueItemsService, IssueItemService>();
 
 
 builder.Services.AddDbContext<MymentalhealthContext>(
-    o => o.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+    o => o.UseNpgsql(builder.Configuration.GetConnectionString("Default"))
     );
 
 var app = builder.Build();

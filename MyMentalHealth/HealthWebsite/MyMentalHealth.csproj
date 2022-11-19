@@ -22,6 +22,7 @@
     <None Remove="Data\" />
     <None Remove="Interface\" />
     <None Remove="Observers\" />
+    <None Remove="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
@@ -41,5 +42,6 @@
     <Folder Include="Data\" />
     <Folder Include="Interface\" />
     <Folder Include="Observers\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 </Project>

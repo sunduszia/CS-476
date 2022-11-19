@@ -53,8 +53,8 @@ namespace MyMentalHealth.Controllers
             ViewData["UserId"] = UserId;
 
             int checkInCompleted = _context.DailyCheckins
-                .Where(x => x.UserId == UserId)
-                .Where(x => x.Date >= DateTime.Now.Date.AddDays(-1))
+                .Where(x => x.UserId == UserId
+                && x.Date >= DateTime.Now.Date.AddDays(-1))
                 .Count();
 
             if (checkInCompleted == 0)
