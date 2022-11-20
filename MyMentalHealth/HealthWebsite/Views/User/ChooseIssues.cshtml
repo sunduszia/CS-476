@@ -6,27 +6,27 @@
     ViewData["Title"] = "ChooseIssues";
 }
 
-<div class="row mt-5 d-flex align-items-center justify-content-center" >
-    <div class="col-md-5 col-sm-5 mx-auto">
-        <h2>Choose Mental Health Issues</h2>
-    </div>
-</div>
-<form asp-action="ChooseIssues">
+<div class="row mt-5" >
+    
+    <h2>Choose Mental Health Issues</h2>
+
+    <form asp-action="ChooseIssues">
     <div class="row mt-3">
-        <div class="col-md-10">
-            <table class="table table-bordered">
+        <div class="col-md-8">
+            <table class="table" >
                 @if (Model != null)
                 {
                     <thead>
                         <tr>
-                            <th></th>
                             <th>Mental Health Issues</th>
+                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var mentalHealthIssues in Model.MentalHealthIssues)
                         {
                             <tr>
+                                <td>@mentalHealthIssues.Title</td>
                                 <td style="text-align:center; width:150px;">
                                     @if (Model.IssuesSelected != null && Model.IssuesSelected.Contains(mentalHealthIssues, new CompareIssues()))
                                     {
@@ -38,7 +38,7 @@
 
                                     }
                                 </td>
-                                <td>@mentalHealthIssues.Title</td>
+                                
                             </tr>
                         }
                     </tbody>
@@ -47,12 +47,72 @@
             </table>
         </div>
     </div>
+    
+        
+            <input type="submit" value="Save" class="btn btn-outline-success ml-auto" />
+        
+</form>
+
+</div>
+@*<div class="container">
     <div class="row">
-        <div class="col-md-10 d-flex">
-            <input type="submit" value="Save" class="btn btn-outline-info ml-auto" />
+        <div class="col-md-6 offset-md-3">
+
+            <div class="card my-5">
+
+                <form class="card-body cardbody-color p-lg-5" asp-action="ChooseIssues">
+
+                    
+                        <table class="table border-0">
+                            @if(Model != null)
+                            {
+                                <thead class="border-0">
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                            <tbody>
+                                @foreach (var mentalHealthIssues in Model.MentalHealthIssues)
+                                {
+                                    <tr>
+                                        <td style="text-align:center; width:150px;">
+                                            @if (Model.IssuesSelected != null && Model.IssuesSelected.Contains(mentalHealthIssues, new CompareIssues()))
+                                            {
+                                                <input type="checkbox" class="form-check-input" id="IssuesSelected" name="IssuesSelected" checked value="@mentalHealthIssues.Id">
+                                            }
+                                            else
+                                            {
+                                                <input type="checkbox" class="form-check-input" id="IssuesSelected" name="IssuesSelected" value="@mentalHealthIssues.Id">
+
+                                            }
+                                        </td>
+                                        <td>@mentalHealthIssues.Title</td>
+                                    </tr>
+                                }
+                            </tbody>
+                            }
+                        </table>
+                        
+                 
+                   
+                    
+                    @if (ViewData["LoginError"] != null)
+                    {
+                        <br />
+                        @ViewData["LoginError"]
+                        <br />
+                    }
+                    <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Save</button></div>
+                </form>
+            </div>
+
         </div>
     </div>
-</form>
+
+</div>*@
+
+
 
 <style>
     .btn-color {
@@ -66,7 +126,9 @@
         object-fit: cover;
     }
 
-
+    thead th td{
+        border:none !important;
+    }
 
     .cardbody-color {
         /*background-color: rgba(0,79,46);*/

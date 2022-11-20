@@ -3,13 +3,104 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="col-12 pt-5 pb-2">
+    <div class="d-flex justify-content-between  align-items-center">
+        <h1>Manage Users</h1>
+        <a asp-action="Create" class="btn btn-outline-success">Create New</a>
+        
+    </div>
+</div>
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<div>
+<section class="intro">
+  <div class="gradient-custom-1 h-100">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="table-responsive bg-white">
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                     @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th scope="col">
+                     @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th scope="col">
+                     @Html.DisplayNameFor(model => model.StudentId)
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  
+               @foreach (var item in Model) {   
+                  <tr>
+                    <th scope="row" style="color: #666666;">
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StudentId)
+                        </td>
+                    <td>
+                    <a asp-action="Edit" class="btn btn-outline-primary" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" class="btn btn-outline-secondary" asp-route-id="@item.Id">Details</a> 
+                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                 </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<style>
+    html,
+    body,
+    .intro {
+        height: 100%;
+    }
+
+    .gradient-custom-1 {
+        /* fallback for old browsers */
+        background: rgba(0,79,46);
+        
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to top, rgba(0,79,46), rgba(246, 243, 255, 1));
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to top, rgba(0,79,46) , rgba(246, 243, 255, 1))
+    }
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align:center;
+    }
+
+    tbody td {
+        font-weight: 500;
+        color: #999999;
+    }
+</style>
+
+@*<table class="table table-hover ">
     <thead>
         <tr>
             <th>
@@ -39,11 +130,11 @@
                 @Html.DisplayFor(modelItem => item.StudentId)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" class="btn btn-outline-primary" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" class="btn btn-outline-secondary" asp-route-id="@item.Id">Details</a> 
+                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
     </tbody>
-</table>
+</table>*@

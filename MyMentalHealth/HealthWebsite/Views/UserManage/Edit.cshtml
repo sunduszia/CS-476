@@ -4,11 +4,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
 
-<h4>Users</h4>
-<hr />
-<div class="row">
+@*<div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -48,8 +45,57 @@
             </div>
         </form>
     </div>
-</div>
+</div>*@
+<div class="container">
+    <div class="row mt-5">
 
+        <form asp-action="Edit">
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <!-- StudentId input -->
+            <div class="form-outline mb-4">
+                <label asp-for="StudentId" class="control-label"></label>
+                <input asp-for="StudentId" class="form-control" />
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="RoleId" value="2" />
+
+
+
+
+            <!-- Submit button -->
+            <button type="submit" value="Save" class="btn btn-primary btn-block mb-4">Create User</button>
+        </form>
+    </div>
+</div>
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
