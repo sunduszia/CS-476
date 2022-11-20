@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-md-8">
-        <form asp-action="Login">
+        <form class="card-body cardbody-color p-lg-5" asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
@@ -48,6 +48,29 @@
 <br />
 <p>If you a student, please use the Student Login</p>
 
+<style>
+    .btn-color {
+        background-color: rgba(0,79,46);
+        color: #fff;
+    }
+
+    .profile-image-pic {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+
+
+
+    .cardbody-color {
+        /*background-color: rgba(0,79,46);*/
+        background-color: #f8f9fa;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
