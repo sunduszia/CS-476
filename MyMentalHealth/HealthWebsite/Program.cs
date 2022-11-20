@@ -7,6 +7,7 @@ using MyMentalHealth.Models;
 using MyMentalHealth.Interface;
 using MyMentalHealth.Observers;
 using NuGet.Protocol.Core.Types;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-.AddCookie();
+.AddCookie(options =>
+{
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+    options.SlidingExpiration = true;
+    //options.AccessDeniedPath = "/path/unauthorized";
+    options.LoginPath = "/User/Login";
+});
 
 builder.Services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IIssueItemsService, IssueItemService>();
@@ -62,5 +69,6 @@ app.UseEndpoints(endpoints =>
           name: "default",
           pattern: "{controller=Home}/{action=Index}/{id?}");
 });
+
 app.Run();
 

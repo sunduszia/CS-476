@@ -27,6 +27,7 @@ namespace MyMentalHealth.Controllers
             _httpContextAccessor = httpContextAccessor;
             //_mediator = mediator;
         }
+        [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
@@ -80,7 +81,7 @@ namespace MyMentalHealth.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction(nameof(Index),"Home");
         }
-
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -132,12 +133,12 @@ namespace MyMentalHealth.Controllers
             }
             return View(registrationModel);
         }
-
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public async Task<IActionResult> IssueContent()
         {
             int UserId = Int32.Parse(_httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(i => i.Type == "Id").Value);
@@ -153,7 +154,7 @@ namespace MyMentalHealth.Controllers
 
             return View(mentalHealthIssue);
         }
-
+        [Authorize]
         public async Task<IActionResult> ChooseIssues()
         {
             IssuesToUserModel issuesToUser = new IssuesToUserModel();
@@ -164,6 +165,7 @@ namespace MyMentalHealth.Controllers
             issuesToUser.UserId = userId;
             return View(issuesToUser);
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChooseIssues(int[] issuesSelected)
