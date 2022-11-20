@@ -19,7 +19,6 @@
     <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <None Remove="Views\User\" />
     <None Remove="Mapping\" />
-    <None Remove="Data\" />
     <None Remove="Interface\" />
     <None Remove="Observers\" />
     <None Remove="Migrations\" />
@@ -39,7 +38,6 @@
   <ItemGroup>
     <Folder Include="Views\User\" />
     <Folder Include="Mapping\" />
-    <Folder Include="Data\" />
     <Folder Include="Interface\" />
     <Folder Include="Observers\" />
     <Folder Include="Migrations\" />

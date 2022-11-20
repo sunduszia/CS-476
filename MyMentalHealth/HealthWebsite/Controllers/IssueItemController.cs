@@ -52,9 +52,11 @@ namespace MyMentalHealth.Controllers
                                                            MentalHealthIssueId = mentalHealthIssueId,
                                                            ContentId = (subContent != null) ? subContent.Id : 0,
                                                        }).ToListAsync();
-            
 
-            foreach(var item in listOfIssueItems)
+
+
+
+            foreach (var item in listOfIssueItems)
             {
                 var resource = _context.ResourceTypes.FirstOrDefault(e => e.Id == item.ResourceTypeId);
                 item.ResourceTitle = resource.Title;
@@ -63,6 +65,8 @@ namespace MyMentalHealth.Controllers
             ViewBag.MentalHealthIssueId = mentalHealthIssueId;
             return View(listOfIssueItems);
         }
+
+        
         
         //public string GetResourceTitle(int resourceTypeId)
         //{
