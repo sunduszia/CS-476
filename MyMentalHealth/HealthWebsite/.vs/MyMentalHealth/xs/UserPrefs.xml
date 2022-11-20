@@ -1,79 +1,69 @@
 ﻿<Properties StartupConfiguration="{0E14FF19-4660-4A1F-B3C7-AC6209373923}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Views/Shared/_UsersListPartial.cshtml" relfile="Views/Shared/_UsersListPartial.cshtml" line="13" column="1" />
-      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="61" column="1" />
-      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="62" column="1" />
-      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="64" column="1" />
-      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="67" column="1" />
-      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="69" column="1" />
-      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="68" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.MyMentalHealth PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Properties/launchSettings.json">
+  <MonoDevelop.Ide.ItemProperties.MyMentalHealth PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="Controllers/UserController.cs" Line="154" Column="1" />
       <File FileName="Views/User/Login.cshtml" Line="7" Column="7" />
       <File FileName="Controllers/AdminController.cs" Line="34" Column="173" />
-      <File FileName="Views/Shared/_LoginPartial.cshtml" Line="18" Column="104" />
-      <File FileName="Views/Shared/_MenuPartial.cshtml" Line="28" Column="98" />
+      <File FileName="Views/Shared/_LoginPartial.cshtml" Line="20" Column="104" />
+      <File FileName="Views/Shared/_MenuPartial.cshtml" Line="4" Column="24" />
       <File FileName="Controllers/MentalHealthIssueController.cs" Line="129" Column="35" />
-      <File FileName="Views/Admin/Login.cshtml" Line="48" Column="7" />
+      <File FileName="Views/Admin/Login.cshtml" Line="87" Column="17" />
       <File FileName="Models/LoginModel.cs" Line="26" Column="8" />
       <File FileName="Models/AdminModel.cs" Line="1" Column="1" />
       <File FileName="Views/Admin/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="45" Column="53" />
       <File FileName="Models/RegistrationModel.cs" Line="10" Column="39" />
-      <File FileName="appsettings.json" Line="18" Column="2" />
+      <File FileName="appsettings.json" Line="15" Column="39" />
       <File FileName="Controllers/UserManageController.cs" Line="117" Column="15" />
       <File FileName="Views/UserManage/Create.cshtml" Line="2" Column="1" />
       <File FileName="Views/MentalHealthIssue/Delete.cshtml" Line="1" Column="1" />
       <File FileName="Views/UserManage/Delete.cshtml" Line="6" Column="1" />
       <File FileName="Views/UserManage/Details.cshtml" Line="43" Column="9" />
       <File FileName="Views/UserManage/Edit.cshtml" Line="1" Column="42" />
-      <File FileName="Views/UserManage/Index.cshtml" Line="24" Column="18" />
+      <File FileName="Views/UserManage/Index.cshtml" Line="115" Column="18" />
       <File FileName="Views/User/Register.cshtml" Line="9" Column="27" />
-      <File FileName="Views/User/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/User/Index.cshtml" Line="32" Column="9" />
       <File FileName="Program.cs" Line="45" Column="5" />
       <File FileName="Models/MymentalhealthContext.cs" Line="22" Column="1" />
       <File FileName="Views/MentalHealthIssue/Create.cshtml" Line="8" Column="1" />
       <File FileName="Controllers/ResourceTypeController.cs" Line="69" Column="1" />
       <File FileName="Views/ResourceType/Create.cshtml" Line="1" Column="50" />
       <File FileName="Views/ResourceType/Edit.cshtml" Line="2" Column="1" />
-      <File FileName="Controllers/IssueItemController.cs" Line="152" Column="9" />
+      <File FileName="Controllers/IssueItemController.cs" Line="156" Column="9" />
       <File FileName="Views/ResourceType/Details.cshtml" Line="1" Column="1" />
       <File FileName="Views/MentalHealthIssue/Edit.cshtml" Line="4" Column="32" />
-      <File FileName="Views/IssueItem/Create.cshtml" Line="23" Column="76" />
+      <File FileName="Views/IssueItem/Create.cshtml" Line="22" Column="80" />
       <File FileName="Views/Admin/AdminViewChats.cshtml" Line="1" Column="1" />
       <File FileName="Models/DailyCheckins.cs" Line="25" Column="1" />
-      <File FileName="Views/MentalHealthIssue/Index.cshtml" Line="40" Column="110" />
+      <File FileName="Views/MentalHealthIssue/Index.cshtml" Line="53" Column="1" />
       <File FileName="Views/DailyCheckins/Create.cshtml" Line="2" Column="1" />
       <File FileName="Controllers/DailyCheckinsController.cs" Line="57" Column="59" />
       <File FileName="Models/IssueItemsDetailsModel.cs" Line="16" Column="1" />
       <File FileName="Models/MentalHealthIssueDetailsModel.cs" Line="11" Column="1" />
       <File FileName="Models/GroupItemsByIssueModel.cs" Line="12" Column="1" />
-      <File FileName="Views/User/IssueContent.cshtml" Line="45" Column="87" />
+      <File FileName="Views/User/IssueContent.cshtml" Line="18" Column="39" />
       <File FileName="Models/IssuesToUserModel.cs" Line="13" Column="1" />
       <File FileName="Mapping/ContentMapping.cs" Line="23" Column="1" />
       <File FileName="Controllers/ContentController.cs" Line="237" Column="52" />
-      <File FileName="Views/IssueItem/Index.cshtml" Line="49" Column="62" />
+      <File FileName="Views/IssueItem/Index.cshtml" Line="51" Column="62" />
       <File FileName="Views/IssueItem/Edit.cshtml" Line="10" Column="7" />
-      <File FileName="Views/IssueItem/Delete.cshtml" Line="19" Column="14" />
+      <File FileName="Views/IssueItem/Delete.cshtml" Line="25" Column="10" />
       <File FileName="Views/IssueItem/Details.cshtml" Line="20" Column="61" />
       <File FileName="appsettings.Development.json" Line="1" Column="1" />
       <File FileName="wwwroot/css/main.css" Line="1" Column="1" />
       <File FileName="wwwroot/css/site.css" Line="1" Column="1" />
-      <File FileName="Views/Home/Index.cshtml" Line="14" Column="1" />
+      <File FileName="Views/Home/Index.cshtml" Line="33" Column="1" />
       <File FileName="Views/Questionnaire/Index.cshtml" Line="1" Column="1" />
       <File FileName="Views/Questionnaire/Edit.cshtml" Line="1" Column="1" />
       <File FileName="Views/Questionnaire/Details.cshtml" Line="1" Column="1" />
       <File FileName="Views/Questionnaire/Create.cshtml" Line="1" Column="1" />
       <File FileName="Views/Questionnaire/Delete.cshtml" Line="1" Column="1" />
-      <File FileName="Controllers/QuestionnaireController.cs" Line="1" Column="1" />
       <File FileName="Properties/launchSettings.json" Line="27" Column="2" />
       <File FileName="Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="Views/User/ChooseIssues.cshtml" Line="10" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -87,11 +77,8 @@
                 <Node name="Admin" expanded="True" />
                 <Node name="Home" expanded="True" />
                 <Node name="IssueItem" expanded="True" />
-                <Node name="Questionnaire" expanded="True" />
-                <Node name="User" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True" />
-              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -102,5 +89,15 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Views/Shared/_UsersListPartial.cshtml" relfile="Views/Shared/_UsersListPartial.cshtml" line="13" column="1" />
+      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="61" column="1" />
+      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="62" column="1" />
+      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="64" column="1" />
+      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="67" column="1" />
+      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="69" column="1" />
+      <Breakpoint file="/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/Controllers/ResourceTypeController.cs" relfile="Controllers/ResourceTypeController.cs" line="68" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

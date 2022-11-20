@@ -23,10 +23,10 @@
 
 <h1>Index</h1>
 <p>
-    <a asp-action="Create">Checkin Today</a>
+    <a asp-action="Create" class="btn btn-outline-success">CheckIn Today</a>
 </p>
 <div>
-    <h1>Daily Checkin Calendar</h1>
+    <h1>Daily CheckIn Calendar</h1>
     <div id='calendar'></div>
 </div>
 <table class="table">
@@ -52,8 +52,8 @@
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" class="btn btn-outline-primary" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }
