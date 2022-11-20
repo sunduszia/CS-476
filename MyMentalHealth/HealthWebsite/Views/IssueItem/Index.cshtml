@@ -4,11 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create" asp-route-mentalHealthIssueId="@ViewBag.MentalHealthIssueId">Create New</a>
-</p>
+<div class="mt-5">
+    <div class="d-flex justify-content-between  align-items-center">
+        <h3>Resources to cope with Mental Issues</h3>
+        <a asp-action="Create" class="btn btn-outline-success" asp-route-mentalHealthIssueId="@ViewBag.MentalHealthIssueId">Create New</a>
+
+    </div>
 <table class="table">
     <thead>
         <tr>
@@ -32,40 +34,40 @@
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                    <a asp-action="Edit"  class="btn btn-outline-primary" asp-route-id="@item.Id">Edit</a> 
+                        <a asp-action="Details" class="btn btn-outline-secondary" asp-route-id="@item.Id">Details</a>
+                        <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.Id">Delete</a>
                     @if (item.ResourceTitle == "Article")
                     {
                         @if (item.ContentId == 0)
                         {
-                            <a asp-controller="Content" asp-action="CreateArticle" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Article</a>
+                                <a asp-controller="Content" asp-action="CreateArticle" class="btn btn-outline-success" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Article</a>
                         }
                         else
                         {
-                            <a asp-controller="Content" asp-action="EditArticle" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Article</a>
+                                <a asp-controller="Content" asp-action="EditArticle" class="btn btn-outline-primary" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Article</a>
                         }
                     }
                     else if (item.ResourceTitle == "Exercise")
                     {
                         @if (item.ContentId == 0)
                         {
-                            <a asp-controller="Content" asp-action="CreateExercise" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Exercise</a>
+                                <a asp-controller="Content" asp-action="CreateExercise" class="btn btn-outline-success" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Exercise</a>
                         }
                         else
                         {
-                            <a asp-controller="Content" asp-action="EditExercise" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Exercise</a>
+                            <a asp-controller="Content" asp-action="EditExercise"  class="btn btn-outline-primary" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Exercise</a>
                         }
                     }
                     else
                     {
                         @if (item.ContentId == 0)
                         {
-                            <a asp-controller="Content" asp-action="CreateDefaultContent" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Content</a>
+                                <a asp-controller="Content" asp-action="CreateDefaultContent" class="btn btn-outline-success" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Add Content</a>
                         }
                         else
                         {
-                            <a asp-controller="Content" asp-action="EditDefaultContent" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Content</a>
+                            <a asp-controller="Content" asp-action="EditDefaultContent"  class="btn btn-outline-primary" asp-route-issueItemId="@item.Id" asp-route-mentalHealthIssueId="@item.MentalHealthIssueId">Edit Content</a>
                         }
                     }
 
@@ -75,6 +77,7 @@
         }
     </tbody>
 </table>
+</div>
 
 @*
     @if(item.ResourceTitle == "Article")

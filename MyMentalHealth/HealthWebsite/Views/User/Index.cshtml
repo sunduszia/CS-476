@@ -1,3 +1,49 @@
-﻿<p>Hello User</p>
+﻿@{
+    ViewData["Title"] = "User Home Page";
+}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        @*<h1 class="display-4">Welcome to CS 476 Project: My Mental Health</h1>*@
 
+        <div class="col-md-12" style="position:relative;">
+            <div class="bg-light img-fluid"
+                 style="position: absolute;
+                        width: 97%;
+                        height: 80%;
+                        opacity:0.6">
+            </div>
 
+            @if (User.IsInRole("User"))
+            {
+                <h3 class="position-absolute top-50 w-75 p-3 text-capitalize font-weight-bold">
+                    If you are considering self-harm, or know someone who is, immediate help is available 24/7. Please contact 911.
+                </h3>
+            }
+            else
+            {
+        <h3 class="position-absolute top-50 w-75 p-3 text-capitalize font-weight-bold">
+            If you are considering self-harm, or know someone who is, immediate help is available 24/7. Please contact 911.
+        </h3>
+            }
+
+            <img src="./css/images/High-School-Students.jpg" class="img-fluid mx-auto d-block" style="background-size:cover;" />
+        </div>
+
+        <div class="p-3">
+            <h3 class="me-auto py-3  text-black-50">Everyone will feel different and that’s OK</h3>
+            <p class="justify-content-evenly pb-5">
+                The important thing to remember as we go back to on campus life is that everyone’s experiences and expectations will be different.  You don’t know what everyone else is going through so don’t assume that everyone else is fine and you are the only one who is nervous about the changes.
+
+                If there is one thing this pandemic has shown us it is that we all respond to major changes differently. While some people have been eager to get out and about, others may be taking slightly more cautious steps into socialising. 
+
+                Take the time you need to understand what works best for YOU as things start to return to the "new normal".
+                This will not happen overnight, so take your time and don’t feel pressured to make changes just because people around you are.
+
+                Be kind to friends or peers who look a little nervous, give people time to adjust and ensure that you use the supports available to you here on the Mental Wellness Hub.
+
+                Have a great Fall term and remember........you are not alone!
+            </p>
+        </div>
+    </div>
+
+</div>

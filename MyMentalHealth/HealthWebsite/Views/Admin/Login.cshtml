@@ -3,10 +3,9 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>Admin Login</h1>
-<hr />
 
-<div class="row">
+
+@*<div class="row">
     <div class="col-md-8">
         <form class="card-body cardbody-color p-lg-5" asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -40,13 +39,50 @@
             </div>
         </form>
     </div>
+</div>*@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <div class="card my-5">
+
+                <form class="card-body cardbody-color p-lg-5" asp-action="Login">
+
+                    <div class="text-center">
+                        
+                         <h2 class="mb-5">Admin Login</h2>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" asp-for="Email" class="form-control" id="email" aria-describedby="emailHelp"
+                               placeholder="Email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" asp-for="Password" class="form-control" id="password" placeholder="password">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
+                        </label>
+                    </div>
+                    @if (ViewData["LoginError"] != null)
+                    {
+                        <br />
+                        @ViewData["LoginError"]
+                        <br />
+                    }
+                    <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
 </div>
-<br />
-<br />
-<br />
-<br />
-<br />
-<p>If you a student, please use the Student Login</p>
+
 
 <style>
     .btn-color {
@@ -71,6 +107,8 @@
         text-decoration: none;
     }
 </style>
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

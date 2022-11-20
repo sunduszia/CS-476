@@ -4,46 +4,47 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
 
-<h4>IssueItems</h4>
-<hr />
-<div class="row">
-    <div class="col-md-10">
-        <form asp-action="Create">
-            <input type="hidden" asp-for="MentalHealthIssueId"  />
+<div class="mt-5">
+    <h4>Create Exercise</h4>
+    <div class="row">
+        <div class="col-md-10">
+            <form asp-action="Create">
+                <input type="hidden" asp-for="MentalHealthIssueId" />
 
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <textarea asp-for="Description" rows="4" class="form-control"></textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <textarea asp-for="Description" rows="4" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="ResourceTypeId" class="control-label"></label>
-                <select asp-for="ResourceTypeId" class="form-control" asp-items="@ViewBag.ResourceList">
-                    <option value="">Select the Resource Type</option>
-                    
+                <div class="form-group">
+                    <label asp-for="ResourceTypeId" class="control-label"></label>
+                    <select asp-for="ResourceTypeId" class="form-control" asp-items="@ViewBag.ResourceList">
+                        <option value="">Select the Resource Type</option>
 
-                </select>
-                <span asp-validation-for="ResourceTypeId" class="text-danger"></span>
 
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+                    </select>
+                    <span asp-validation-for="ResourceTypeId" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-success"  />
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
+
 <div>
-    <a asp-action="Index" asp-route-mentalHealthIssueId="@Model.MentalHealthIssueId">Back to List</a>
+    <a asp-action="Index" class="btn btn-outline-info" asp-route-mentalHealthIssueId="@Model.MentalHealthIssueId">Back to List</a>
 </div>
 
 @section Scripts {

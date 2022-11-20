@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IKFWj6gAd6ZyeStWq6R2COmCK+KtM4ZJl1RnTY3oE4E=",
+  "Hash": "r1/PfQ4mXdCJAdVK5ZEsCWfNpZPD/OH817YtsCzRvHU=",
   "Source": "MyMentalHealth",
   "BasePath": "_content/MyMentalHealth",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/images/High-School-Students.jpg"
+    },
+    {
+      "Identity": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/wwwroot/css/images/teens.jpg",
+      "SourceId": "MyMentalHealth",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/wwwroot/",
+      "BasePath": "_content/MyMentalHealth",
+      "RelativePath": "css/images/teens.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/images/teens.jpg"
     },
     {
       "Identity": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/wwwroot/css/main.css",
