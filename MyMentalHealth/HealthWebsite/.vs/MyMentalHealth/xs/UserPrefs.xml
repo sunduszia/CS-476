@@ -2,21 +2,21 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.MyMentalHealth PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Index.cshtml">
     <Files>
-      <File FileName="Controllers/UserController.cs" Line="154" Column="1" />
-      <File FileName="Views/User/Login.cshtml" Line="7" Column="7" />
+      <File FileName="Controllers/UserController.cs" Line="155" Column="1" />
+      <File FileName="Views/User/Login.cshtml" Line="67" Column="22" />
       <File FileName="Controllers/AdminController.cs" Line="34" Column="173" />
       <File FileName="Views/Shared/_LoginPartial.cshtml" Line="20" Column="104" />
-      <File FileName="Views/Shared/_MenuPartial.cshtml" Line="4" Column="24" />
+      <File FileName="Views/Shared/_MenuPartial.cshtml" Line="25" Column="112" />
       <File FileName="Controllers/MentalHealthIssueController.cs" Line="129" Column="35" />
-      <File FileName="Views/Admin/Login.cshtml" Line="87" Column="17" />
+      <File FileName="Views/Admin/Login.cshtml" Line="86" Column="1" />
       <File FileName="Models/LoginModel.cs" Line="26" Column="8" />
       <File FileName="Models/AdminModel.cs" Line="1" Column="1" />
-      <File FileName="Views/Admin/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Shared/_Layout.cshtml" Line="45" Column="53" />
+      <File FileName="Views/Admin/Index.cshtml" Line="12" Column="9" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="37" Column="65" />
       <File FileName="Models/RegistrationModel.cs" Line="10" Column="39" />
-      <File FileName="appsettings.json" Line="15" Column="39" />
+      <File FileName="appsettings.json" Line="3" Column="177" />
       <File FileName="Controllers/UserManageController.cs" Line="117" Column="15" />
       <File FileName="Views/UserManage/Create.cshtml" Line="2" Column="1" />
       <File FileName="Views/MentalHealthIssue/Delete.cshtml" Line="1" Column="1" />
@@ -24,9 +24,9 @@
       <File FileName="Views/UserManage/Details.cshtml" Line="43" Column="9" />
       <File FileName="Views/UserManage/Edit.cshtml" Line="1" Column="42" />
       <File FileName="Views/UserManage/Index.cshtml" Line="115" Column="18" />
-      <File FileName="Views/User/Register.cshtml" Line="9" Column="27" />
-      <File FileName="Views/User/Index.cshtml" Line="32" Column="9" />
-      <File FileName="Program.cs" Line="45" Column="5" />
+      <File FileName="Views/User/Register.cshtml" Line="165" Column="1" />
+      <File FileName="Views/User/Index.cshtml" Line="36" Column="17" />
+      <File FileName="Program.cs" Line="52" Column="5" />
       <File FileName="Models/MymentalhealthContext.cs" Line="22" Column="1" />
       <File FileName="Views/MentalHealthIssue/Create.cshtml" Line="8" Column="1" />
       <File FileName="Controllers/ResourceTypeController.cs" Line="69" Column="1" />
@@ -36,48 +36,63 @@
       <File FileName="Views/ResourceType/Details.cshtml" Line="1" Column="1" />
       <File FileName="Views/MentalHealthIssue/Edit.cshtml" Line="4" Column="32" />
       <File FileName="Views/IssueItem/Create.cshtml" Line="22" Column="80" />
-      <File FileName="Views/Admin/AdminViewChats.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Admin/AdminViewChats.cshtml" Line="24" Column="110" />
       <File FileName="Models/DailyCheckins.cs" Line="25" Column="1" />
       <File FileName="Views/MentalHealthIssue/Index.cshtml" Line="53" Column="1" />
-      <File FileName="Views/DailyCheckins/Create.cshtml" Line="2" Column="1" />
+      <File FileName="Views/DailyCheckins/Create.cshtml" Line="8" Column="1" />
       <File FileName="Controllers/DailyCheckinsController.cs" Line="57" Column="59" />
       <File FileName="Models/IssueItemsDetailsModel.cs" Line="16" Column="1" />
       <File FileName="Models/MentalHealthIssueDetailsModel.cs" Line="11" Column="1" />
       <File FileName="Models/GroupItemsByIssueModel.cs" Line="12" Column="1" />
-      <File FileName="Views/User/IssueContent.cshtml" Line="18" Column="39" />
+      <File FileName="Views/User/IssueContent.cshtml" Line="79" Column="8" />
       <File FileName="Models/IssuesToUserModel.cs" Line="13" Column="1" />
       <File FileName="Mapping/ContentMapping.cs" Line="23" Column="1" />
       <File FileName="Controllers/ContentController.cs" Line="237" Column="52" />
-      <File FileName="Views/IssueItem/Index.cshtml" Line="51" Column="62" />
+      <File FileName="Views/IssueItem/Index.cshtml" Line="46" Column="29" />
       <File FileName="Views/IssueItem/Edit.cshtml" Line="10" Column="7" />
       <File FileName="Views/IssueItem/Delete.cshtml" Line="25" Column="10" />
       <File FileName="Views/IssueItem/Details.cshtml" Line="20" Column="61" />
       <File FileName="appsettings.Development.json" Line="1" Column="1" />
       <File FileName="wwwroot/css/main.css" Line="1" Column="1" />
       <File FileName="wwwroot/css/site.css" Line="1" Column="1" />
-      <File FileName="Views/Home/Index.cshtml" Line="33" Column="1" />
+      <File FileName="Views/Home/Index.cshtml" Line="17" Column="11" />
       <File FileName="Views/Questionnaire/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Questionnaire/Edit.cshtml" Line="1" Column="1" />
       <File FileName="Views/Questionnaire/Details.cshtml" Line="1" Column="1" />
       <File FileName="Views/Questionnaire/Create.cshtml" Line="1" Column="1" />
       <File FileName="Views/Questionnaire/Delete.cshtml" Line="1" Column="1" />
       <File FileName="Properties/launchSettings.json" Line="27" Column="2" />
       <File FileName="Views/Home/Privacy.cshtml" Line="1" Column="1" />
-      <File FileName="Views/User/ChooseIssues.cshtml" Line="10" Column="5" />
+      <File FileName="Views/User/ChooseIssues.cshtml" Line="57" Column="26" />
+      <File FileName="Views/DailyCheckins/Index.cshtml" Line="41" Column="22" />
+      <File FileName="Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Views/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="Views/MentalHealthIssue/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/Error.cshtml" Line="1" Column="1" />
+      <File FileName="Views/ResourceType/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/CreateArticle.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/CreateDefaultContent.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/CreateExercise.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/EditArticle.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/EditDefaultContent.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/EditExercise.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/ShowArticle.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/ShowDefault.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Content/ShowExercise.cshtml" Line="1" Column="1" />
+      <File FileName="Views/DailyCheckins/Delete.cshtml" Line="7" Column="19" />
+      <File FileName="Views/DailyCheckins/Edit.cshtml" Line="14" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyMentalHealth" expanded="True">
-            <Node name="MyMentalHealth" expanded="True">
+            <Node name="MyMentalHealth" expanded="True" selected="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Admin" expanded="True" />
+                <Node name="DailyCheckins" expanded="True" />
                 <Node name="Home" expanded="True" />
-                <Node name="IssueItem" expanded="True" />
                 <Node name="Shared" expanded="True" />
+                <Node name="User" expanded="True" />
               </Node>
             </Node>
           </Node>
