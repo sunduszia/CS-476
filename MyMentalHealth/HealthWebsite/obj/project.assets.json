@@ -10127,24 +10127,25 @@
     ]
   },
   "packageFolders": {
-    "/Users/uzbanasir/.nuget/packages/": {}
+    "/Users/sunduszia/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+      "projectUniqueName": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
       "projectName": "MyMentalHealth",
-      "projectPath": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
-      "packagesPath": "/Users/uzbanasir/.nuget/packages/",
-      "outputPath": "/Users/uzbanasir/Documents/GitHub/mentalhealth476/MyMentalHealth/HealthWebsite/obj/",
+      "projectPath": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/MyMentalHealth.csproj",
+      "packagesPath": "/Users/sunduszia/.nuget/packages/",
+      "outputPath": "/Users/sunduszia/Documents/GitHub/CS 476/CS-476/MyMentalHealth/HealthWebsite/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/uzbanasir/.nuget/NuGet/NuGet.Config"
+        "/Users/sunduszia/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10213,7 +10214,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }
